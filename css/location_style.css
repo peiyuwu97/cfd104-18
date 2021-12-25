@@ -1,0 +1,139 @@
+body{
+    background-color: #f1f1ee;
+}
+
+.banner{
+    display: flex;
+    width:100%;
+    background-repeat: no-repeat ;
+    background-attachment:fixed ;   
+    position: relative;
+    justify-content: center;
+}
+.banner_title{
+    width: 140px;
+    height: 40px;
+    padding: 30px;
+    background-color:#bcaf9bdc;
+    box-shadow:2px 2px 3px #7a623d8f;
+    position: absolute;
+    top:80px;
+    right: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+.banner_title::before{
+    content: '';
+    width: 140px;
+    height: 40px;
+    padding: 30px;
+    background-color:#ddccb2d8;
+    position:absolute;
+    z-index: -1;
+    left: 10px;
+    top: 10px;
+}
+.banner_title h1{
+    font-size: 30px;
+    letter-spacing: 5px;
+}
+
+.region{
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.position{
+    display: flex;
+    margin: 0 100px;
+    /* background-color: #dbd7d2dc; */
+}
+.map_icon{
+    width: 25px;
+    position: relative;
+    left: 100px;    
+}
+.map_icon:hover{
+    transform: scale(1.2);
+    transition:all 0.5s ease 0s;
+    filter: invert(13%) sepia(99%) saturate(2853%) hue-rotate(353deg) brightness(112%) contrast(88%);
+}
+.position h1{
+    font-size: 20px;
+    padding: 5px;
+    letter-spacing: 3px;
+}
+
+.dotted_line{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+    opacity: 0.8;
+}
+.info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    padding: 30px;
+    margin-bottom: 100px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+.pic{
+    width: 50%;
+}
+.shop_pic{
+    width: 400px;
+    margin-left: 60px; 
+    box-shadow: 2px 2px 3px 2px #2c2b298f;
+}
+.text{
+    width: 40%;
+    padding: 20px;
+    margin-right: 60px; 
+    background-color: rgb(238, 227, 213);
+    position: relative;
+    letter-spacing: 1px;
+}
+.text h2{
+    font-size: 18px;
+    margin: 5px 0 50px 10px;
+}
+.text p{
+    line-height: 1.5;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.google_map{
+    position: absolute;
+    right: -8px;
+    bottom: -8px;
+}
+/* 放大 */
+.google_map:hover{
+    transform: scale(1.1);
+    transition:all 0.5s ease;
+}
+.card:nth-child(even){
+    flex-direction: row-reverse;
+}
+.card:nth-child(even) .shop_pic{
+    margin-left: 24px;
+}
+.card:nth-child(even) .text{
+    margin-left: 0px;
+    margin-right: -45px; 
+}

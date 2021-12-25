@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>會員註冊</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/login_style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <style>
+        .login{
+            background-image: url(https://cdn.pixabay.com/photo/2018/08/12/18/42/dog-3601383_1280.jpg);
+            height: 700px;
+        }
+    </style>
+</head>
+<body>
+    <!-- header -->
+    <section class="header">
+        <a class="logo" href="homepage.html"><img src="img/logo.png" alt="logo"></a>
+        <nav>
+
+            <div class="shop">
+                <a href="mall.html" class="header__link mall">商店</a>
+                <!-- 次選單 -->
+                <div class="header__sublink">
+                    <a href="#">最新商品</a>
+                    <a href="#">外出用品</a>
+                    <a href="#">居家用品</a>
+                </div>
+            </div>
+
+            <a href="news.html" class="header__link ">最新消息</a>
+            <a href="good_comment.html" class="header__link ">商品評價</a>
+            <a href="location.html" class="header__link ">通路資訊</a>
+        </nav>
+        <!-- icon -->
+        <div class="header_icon">
+            <a href=""><img class="header_icon" src="img\icon\header_icon\資產 6.png" alt="searach"></a>
+            <a href=""><img class="header_icon" src="img\icon\header_icon\cart.png" alt="cart"></a>
+            <a id="log_in_icon" href="login.html"><img class="header_icon" src="img\icon\header_icon\login.png" alt="login"></a>            
+        </div>
+    </section>
+
+    <section class="login">
+        <div class="login_box">
+            <h1>會員註冊</h1>
+            <a href="">
+                <div class="login_by">
+                        <img src="img/icon/fb.png" alt="fb">
+                        <p> 使用facebook註冊</p>
+                </div>
+            </a>
+            <a href="">
+                <div class="login_by">
+                        <img src="img/icon/line-1.png" alt="line">
+                        <p> 使用line註冊</p>
+                </div>
+            </a>
+            <a href="">
+                <div class="login_by">
+                        <img src="img/icon/ig.png" alt="ig">
+                        <p> 使用instagram註冊</p>           
+                </div>
+            </a>
+            <div class="email_box">
+                <h2>信箱</h2>
+                <input type="email" name="email" id="email" placeholder="請輸入信箱">
+            </div>
+            <div class="password_box">
+                <h2>密碼</h2>
+                <input type="password" name="password" id="password" placeholder="請輸入密碼">
+            </div>
+            <div class="password_box">
+                <h2>密碼確認</h2>
+                <input type="password" name="password" id="password" placeholder="請再次輸入密碼">
+            </div>
+            <button id="login_btn">
+                <h2>註冊</h2>
+            </button>
+            <div class="register">
+                <p>
+                    <a href="login.html" id="register">登入</a>
+                    或
+                    <a href="" id="forget">忘記密碼</a>
+                </p>
+            </div>
+            
+        </div>
+    </section>
+    <section class="footer">
+         
+        <div class="contact">
+            <h3>聯絡我們</h3>
+            <p>
+            營業時間：周一至周五 09:30-18:00<br>
+            客服電話：03-1333-3111<br>
+            E-mail：service@gmail.com
+            </p>
+        </div>
+        <div class="guideline">
+            <h3>購物說明</h3>
+            <p>
+            <a href="">條款與細項</a>
+            <a href="">退換貨政策</a>   
+            <a href="">付款與配送</a>
+            </p> 
+        </div>
+        <div class="follow">
+            <h3>關注我們</h3>
+            <div id="follow_icon">
+            <a href=""><img src="img/icon/fb.png" alt="fb"></a>
+            <a href=""><img src="img/icon/ig.png" alt="ig"></a>
+            <a href=""><img src="img/icon/line-1.png" alt="line"></a>
+            </div>
+        </div>
+        <div class="fb">
+            <a href=""><img id="fb_banner" src="img/fb_banner.png" alt="fb_banner"></a>
+        </div>
+</section>
+<div class="copyright">
+    <p>本網站為緯育TibaMe前端設計工程師班第xx期學員專題作品，本平台僅供學習、展示之用。<br>參考資源：Pinterest。若有侵權疑慮，您可以私訊TibaMe-前端設計工程師養成班，後續會由專人協助處理</p>
+</div>
+</body>
+</html>

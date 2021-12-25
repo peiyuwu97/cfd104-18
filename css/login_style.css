@@ -1,0 +1,109 @@
+#log_in_icon{
+    position: relative;
+}
+#log_in_icon::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 6px;
+    bottom: -5px;
+    height: 0;
+    border-bottom: 3px solid #3D2C07;
+}
+.login{
+    width: 100%;
+    height: 600px;
+    background-image: url(https://cdn.pixabay.com/photo/2016/11/29/05/43/dog-1867604_1280.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login_box{
+    width: 500px;
+    position: relative;
+    padding: 30px;
+    border-radius: 30px;
+    background-color: rgba(235, 234, 233, 0.815);
+    letter-spacing: 2px;
+}
+.login_box a{
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+    position: relative;
+    left: 14%;
+}
+.login h1{
+    font-size: 23px;
+    text-align: center;
+}
+.login h2{
+    font-size: 15px;
+    color: black;
+}
+.login_by{
+    width: 70%;
+    padding: 10px 5px;
+    background-color: rgba(12, 8, 0, 0.822);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+.login_by img{
+    margin:0 50px;
+    width: 30px;
+}
+#email,#password{
+    width: 65%;
+    padding: 10px 5px;
+    border-radius: 10px;
+    border: none;
+    display: flex;
+    margin: 0 auto;
+}
+.email_box h2,.password_box h2{
+    display: flex;
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding-left: 15px;
+}
+#login_btn{
+    margin: 10px;
+    width: 200px;
+    padding: 10px 0;
+    background-color: rgba(12, 8, 0, 0.822);
+    border-radius: 10px;
+    position: relative;
+    left: 28%;
+}
+#login_btn h2{
+    color: white;
+    font-size: 15px;
+    letter-spacing: 5px;
+    font-weight: 700;
+}
+.register{
+    text-align: center;
+    font-size: 13px;
+    color: rgb(78, 75, 75);
+    position: relative;
+}
+.register div{
+    display: flex;
+}
+.register a{
+    color: rgb(78, 75, 75);
+    position: relative;
+}
+#register{
+    left: 1%;
+}
+#forget{
+    left:-1%;
+}
