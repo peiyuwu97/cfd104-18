@@ -71,6 +71,9 @@ nav a{
     margin-left: 100px;
     color: rgb(59, 56, 56);
 }
+.path a{
+    color:rgb(59, 56, 56);
+}
 
 /* product_info */
 h1{
@@ -268,6 +271,9 @@ tbody,tr{
 .video{
     width: 100%;
     display: flex;
+}
+.video img{
+    opacity: 0.5;
 }
 iframe{
     display: block;

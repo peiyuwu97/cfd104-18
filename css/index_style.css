@@ -212,6 +212,26 @@ a{
     margin: 20px 0;
     justify-content: space-evenly;
 }
+
+.more{
+    display: block;
+    position: relative;
+    left: 1050px;
+    bottom: 50px;
+    width: 70px;
+    height: 20px;
+    padding: 5px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px 1px  #3F2E11;
+}
+.more:hover{
+    color:#fff;
+    background-color: #3F2E11;
+    box-shadow: 2px 2px 3px 1px #BCAF9B;
+    transition:all 0.8s ease;
+}
+
 /* brand */
 .brand_img{
     display: flex;
@@ -232,16 +252,15 @@ a{
     height: 30px;
 }
 
-/* log_in_for_discount */
-.log_in_for_discount{
-    width: 100%;
-    /* background-color: #524832; */
+/* register_for_discount */
+.register_for_discount{
     margin: 50px 0;
 }
-#joinus_banner{
+#register_banner{
     display: block;
     width: 90%;
     margin: 0 auto;
+    box-shadow: 0px 0px 8px 1px #3D2C07;
 }
 
 /* new */
@@ -458,7 +477,7 @@ h3{
     justify-content:space-evenly;
     align-items: center;
     /* border: solid 1px black; */
-    box-shadow: 0 0 5px 5px #d3d3d3;
+    box-shadow: 0 0 5px 1px #3D2C07;
 }
 .measure{
     width: 360px;
