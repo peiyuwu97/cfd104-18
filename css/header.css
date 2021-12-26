@@ -93,10 +93,10 @@ nav a:hover:after{
     text-decoration: none;
     font-size: 18px;
     padding: 10px;
-    margin: 20px 10px;
+    margin:5px 3px;
 }
 .header__sublink a:hover{
-    background-color: brown;
+    background-color:#3D2C07;
     color: beige;
 }
 .shop:hover .header__sublink {
