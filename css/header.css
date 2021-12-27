@@ -111,7 +111,12 @@ nav a:hover:after{
 .shop:hover .header__sublink {
     display: block;
 }
-
+#out{
+    flex-direction: column;
+}
+/* .sub1:hover .thrid_link{
+    display: block;
+} */
   /* footer */
 .footer{
     background-color: 

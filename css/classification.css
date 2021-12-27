@@ -59,7 +59,6 @@ body{
     font-size: 12px;
 }
 .class_title{
-    color: rgb(87, 70, 48);
     font-size: 25px;
     letter-spacing: 3px;
     background-color: rgb(231, 225, 214);
@@ -70,6 +69,9 @@ body{
     border-radius: 5px;
     top: -370px;
     box-shadow: 2px 2px 5px  rgba(53, 51, 51, 0.781);;
+}
+.class_title a,.product_icon h2,.product_icon h3{
+    color: rgb(87, 70, 48);
 }
 .out_title{
     left: 130px;
