@@ -250,12 +250,13 @@ ul{
     margin: 50px 0 20px 50px;
     
 }
-li{
+.product_details li{
     margin: 10px 10px 10px 50px;
     list-style-type:none;
-    background:url(img/dot.png) no-repeat 0rem 0.2rem;
+    background:url(../img/dot.png) no-repeat 0rem 0.2rem;
+    background-position: 20px;
     background-size: 0.3rem 0.3rem;
-    text-indent:1em;
+    text-indent:3em;
 }
 /* table */
 tbody,tr{
