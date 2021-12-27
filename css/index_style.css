@@ -140,7 +140,7 @@ nav a:hover:after{
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    background-position: bottom ;
+    background-position: center ;
 }
 .hot_product_item img{
     width:200px ;
@@ -164,7 +164,31 @@ a{
     text-decoration: none;
     color: black;
 }
-
+.product .text{
+    position: absolute;
+    width: 202px;
+    height: 202px;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    background-color: rgba(12, 12, 12, 0.219);
+    font-size: 20px;
+    opacity:0 ;
+    transition: 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text h1{
+    color: #fff;
+    background-color:#3f2e11b7;
+    box-shadow: 2px 2px 2px #bcaf9bdc;
+    padding: 20px;
+    border-radius: 10px;
+}
+.pic:hover .text{
+    opacity: 1;
+}
 
 .product_tag{
     position: relative;
