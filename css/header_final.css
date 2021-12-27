@@ -141,6 +141,7 @@ header{
     position: fixed;
     display: flex;
     z-index: 99;
+    box-shadow: 0 0 8px #3d2c07;
 }
 .header_icon{
     height: 30px;
@@ -166,7 +167,7 @@ header{
   /* footer */
 footer{
     background-color: 
-    #3D2C07;
+    #3d2c07;
     height: 175px;
     color: rgba(247, 245, 243, 0.794);
     display: flex;
