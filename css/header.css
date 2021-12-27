@@ -4,6 +4,7 @@ body{
     font-family: 'Noto Sans TC', sans-serif;
     width: 100%;
     max-width: 1263px;
+    margin: auto;
 }
 #on_page::after{
     content: '';
@@ -32,7 +33,13 @@ body{
     margin-right: 10px;
     display: flex;
 }
-
+.header_icon a{
+    transform: translateY(0);
+    transition: .3s;    
+}
+.header_icon a:hover{
+    transform: translateY(-5px);
+}
 .logo{
     display: block;
     margin-left: 50px;
@@ -81,7 +88,7 @@ nav a:hover:after{
 }
 
 .header__sublink{
-    overflow:hidden;
+    overflow: hidden;
     display: none;
     position: absolute;
     width: 100%;
@@ -117,6 +124,7 @@ nav a:hover:after{
     align-items:flex-start;
     padding-top: 50px;
     letter-spacing: 1px;
+    width: 100%;
 }
 .contact{
     margin: 0 30px;

@@ -196,7 +196,7 @@ a{
 .new_tag{
     width: 40px;
     height: 20px;
-    background-color: #412b24;
+    background-color: crimson;
     position: absolute;
     left: 162px;
     top: 10px;
@@ -210,7 +210,7 @@ a{
     height: 0;
     top: 100%;
     right: 0px;
-    border-left: 10px solid  #5f5c58;
+    border-left: 10px solid  #420a0a;
     border-bottom: 5px solid rgb(184, 28, 28 , 0);
 }
 .product_name{
