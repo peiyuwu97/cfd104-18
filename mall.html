@@ -7,36 +7,49 @@
     <title>汪式漫步｜商店</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/mall_style.css">
-    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/header_final.css">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <!-- header -->
-    <section class="header">
+    <header>
         <a class="logo" href="index.html"><img src="img/logo.png" alt="logo"></a>
-        <nav>
-
-            <div class="shop">
-                <a href="mall.html" class="header__link mall" id="on_page">商店</a>
-                <!-- 次選單 -->
-                <div class="header__sublink">
-                    <a href="mall_out.html">最新商品</a>
-                    <a href="mall_out.html">外出用品</a>
-                    <a href="mall_in.html">居家用品</a>
-                </div>
-            </div>
-
-            <a href="news.html" class="header__link ">最新消息</a>
-            <a href="good_comment.html" class="header__link ">商品評價</a>
-            <a href="location.html" class="header__link ">通路資訊</a>
-        </nav>
-        <!-- icon -->
+        <ul class="drop-down-menu">
+            <li><a class="link" id="on_page" href="mall.html">商店</a>
+                <ul class="sub_link">
+                    <li><a href="#">最新商品</a></li>
+                    <li><a href="mall_out.html">外出用品</a>
+                        <ul>
+                            <li><a href="#">項圈</a>
+                            </li>
+                            <li><a href="#">牽繩</a>
+                            </li>
+                            <li><a href="#">胸背帶</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="mall_in.html">居家用品</a>
+                        <ul>
+                            <li><a href="#">玩具</a></li>
+                            <li><a href="#">餐具</a></li>
+                            <li><a href="#">睡窩</a></li>
+                        </ul>
+                    </li>
+    
+                </ul>
+            </li>
+            <li><a class="link" href="news.html">最新消息</a></li>
+            <li><a class="link" href="good_comment.html">商品評價</a></li>
+            <li><a class="link" href="location.html">通路資訊</a></li>
+    
+        </ul>
         <div class="header_icon">
             <a href=""><img class="header_icon" src="img\icon\header_icon\資產 6.png" alt="searach"></a>
             <a href=""><img class="header_icon" src="img\icon\header_icon\cart.png" alt="cart"></a>
             <a href="login.html"><img class="header_icon" src="img\icon\header_icon\login.png" alt="login"></a>            
         </div>
-    </section>
+    
+    </header>
 
 <!-- hot_product -->
 <!-- new -->
@@ -167,7 +180,7 @@
     <a href="mall_in.html" class="more">more →</a>
 </section>
 
-<section class="footer">
+<footer>
          
     <div class="contact">
         <h3>聯絡我們</h3>
@@ -196,8 +209,7 @@
     <div class="fb">
         <a href=""><img id="fb_banner" src="img/fb_banner.png" alt="fb_banner"></a>
     </div>
-
-</section>
+</footer>
 <div class="copyright">
     <p>本網站為緯育TibaMe前端設計工程師班第xx期學員專題作品，本平台僅供學習、展示之用。<br>參考資源：Pinterest。若有侵權疑慮，您可以私訊TibaMe-前端設計工程師養成班，後續會由專人協助處理</p>
 </div>

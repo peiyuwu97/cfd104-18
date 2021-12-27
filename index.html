@@ -7,61 +7,56 @@
     <title>汪式漫步｜首頁</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/index_style.css">
-    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/header_final.css">
     <link rel="stylesheet" href="css/classification.css">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <!-- header -->
-    <section class="header">
-        <a class="logo" href="index.html"><img src="img/logo.png" alt="logo"></a>
-        <nav>
-
-            <div class="shop">
-                <a href="mall.html" class="header__link mall">商店</a>
-                <!-- 次選單 -->
-                <div class="header__sublink">
-                    <a href="mall_out.html" class="sub1">最新商品</a>
-                    <ul id="out" style="list-style: none;">
-                        <li id="out_item">
-                            <a href="mall_out.html" class="sub1" >外出用品</a>
-                            <!-- <ul class="thrid_link">
-                                <li><a href="#">項圈</a></li>
-                                <li><a href="#">胸背帶</a></li>
-                                <li><a href="#">牽繩</a></li>
-                            </ul> -->
+<!-- header -->
+<header>
+    <a class="logo" href="index.html"><img src="img/logo.png" alt="logo"></a>
+    <ul class="drop-down-menu">
+        <li><a class="link" href="mall.html">商店</a>
+            <ul class="sub_link">
+                <li><a href="#">最新商品</a></li>
+                <li><a href="mall_out.html">外出用品</a>
+                    <ul>
+                        <li><a href="#">項圈</a>
+                        </li>
+                        <li><a href="#">牽繩</a>
+                        </li>
+                        <li><a href="#">胸背帶</a>
                         </li>
                     </ul>
-
-                    <ul id="in" style="list-style: none;">
-                        <li id="in_item">
-                            <a href="mall_in.html" class="sub1">居家用品</a>
-                            <!-- <li><a href="#">玩具</a></li>
-                            <li><a href="#">睡窩</a></li>
-                            <li><a href="#">餐具</a></li> -->
-
-                        </li>
+                </li>
+                <li><a href="mall_in.html">居家用品</a>
+                    <ul>
+                        <li><a href="#">玩具</a></li>
+                        <li><a href="#">餐具</a></li>
+                        <li><a href="#">睡窩</a></li>
                     </ul>
-                </div>
-            </div>
+                </li>
 
-            <a href="news.html" class="header__link ">最新消息</a>
-            <a href="good_comment.html" class="header__link ">商品評價</a>
-            <a href="location.html" class="header__link ">通路資訊</a>
-        </nav>
-        <!-- icon -->
-        <div class="header_icon">
-            <a href=""><img class="header_icon" src="img\icon\header_icon\資產 6.png" alt="searach"></a>
-            <a href=""><img class="header_icon" src="img\icon\header_icon\cart.png" alt="cart"></a>
-            <a href="login.html"><img class="header_icon" src="img\icon\header_icon\login.png" alt="login"></a>            
-        </div>
-    </section>
+            </ul>
+        </li>
+        <li><a class="link" href="news.html">最新消息</a></li>
+        <li><a class="link" href="good_comment.html">商品評價</a></li>
+        <li><a class="link" href="location.html">通路資訊</a></li>
 
-    <!-- banner -->
-    <section class="banner">
-        <div class="slide_img">
-        </div>
-    </section>
+    </ul>
+    <div class="header_icon">
+        <a href=""><img class="header_icon" src="img\icon\header_icon\資產 6.png" alt="searach"></a>
+        <a href=""><img class="header_icon" src="img\icon\header_icon\cart.png" alt="cart"></a>
+        <a href="login.html"><img class="header_icon" src="img\icon\header_icon\login.png" alt="login"></a>            
+    </div>
+
+</header>
+
+<!-- banner -->
+<section class="banner">
+    <div class="slide_img">
+    </div>
+</section>
     <div class="slide_control">
         <img src="img/dot.png" alt="dot">
         <img src="img/dot.png" alt="dot">
@@ -463,36 +458,36 @@
         </div>
     </section>
 
-    <section class="footer">
+    <footer>
          
-            <div class="contact">
-                <h3>聯絡我們</h3>
-                <p>
-                營業時間：周一至周五 09:30-18:00<br>
-                客服電話：03-1333-3111<br>
-                E-mail：service@gmail.com
-                </p>
+        <div class="contact">
+            <h3>聯絡我們</h3>
+            <p>
+            營業時間：周一至周五 09:30-18:00<br>
+            客服電話：03-1333-3111<br>
+            E-mail：service@gmail.com
+            </p>
+        </div>
+        <div class="guideline">
+            <h3>購物說明</h3>
+            <p>
+            <a href="">條款與細項</a>
+            <a href="">退換貨政策</a>   
+            <a href="">付款與配送</a>
+            </p> 
+        </div>
+        <div class="follow">
+            <h3>關注我們</h3>
+            <div id="follow_icon">
+            <a href=""><img src="img/icon/fb.png" alt="fb"></a>
+            <a href=""><img src="img/icon/ig.png" alt="ig"></a>
+            <a href=""><img src="img/icon/line-1.png" alt="line"></a>
             </div>
-            <div class="guideline">
-                <h3>購物說明</h3>
-                <p>
-                <a href="">條款與細項</a>
-                <a href="">退換貨政策</a>   
-                <a href="">付款與配送</a>
-                </p> 
-            </div>
-            <div class="follow">
-                <h3>關注我們</h3>
-                <div id="follow_icon">
-                <a href=""><img src="img/icon/fb.png" alt="fb"></a>
-                <a href=""><img src="img/icon/ig.png" alt="ig"></a>
-                <a href=""><img src="img/icon/line-1.png" alt="line"></a>
-                </div>
-            </div>
-            <div class="fb">
-                <a href=""><img id="fb_banner" src="img/fb_banner.png" alt="fb_banner"></a>
-            </div>
-    </section>
+        </div>
+        <div class="fb">
+            <a href=""><img id="fb_banner" src="img/fb_banner.png" alt="fb_banner"></a>
+        </div>
+    </footer>
     <div class="copyright">
         <p>本網站為緯育TibaMe前端設計工程師班第xx期學員專題作品，本平台僅供學習、展示之用。<br>參考資源：Pinterest。若有侵權疑慮，您可以私訊TibaMe-前端設計工程師養成班，後續會由專人協助處理</p>
     </div>

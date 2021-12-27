@@ -2,69 +2,6 @@ body{
     padding-top: 50px;
     background-color:#f1f1ee;
 }
-.header{
-    background-color: #bcaf9bdc;
-    width: 100%;
-    top: 0;
-    left: 0;
-    height:50px;
-    /* padding: 20px; */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: fixed;
-    z-index: 99;
-}
-.header_icon{
-    height: 30px;
-    margin-right: 10px;
-}
-.logo{
-    width: 200px;
-    margin-left: 50px;
-
-}
-nav{
-    display: inline-block;
-}
-nav a{
-    text-decoration: none;
-    font-size: 20px;
-    margin: 20px;
-    color: black;
-}
-.shop {
-    float: left;
-    overflow: hidden;
-}
-.mall{
-    position: relative;
-}
-
-.header__sublink{
-    overflow:hidden;
-    display: none;
-    position: absolute;
-    width: 100%;
-    z-index: 1;
-}
-.header__sublink a {
-    background-color:#ddccb28f ;
-    color: black;
-    border-radius: 10px;
-    float: left;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 10px;
-    margin: 20px 10px;
-}
-.header__sublink a:hover{
-    background-color: brown;
-    color: beige;
-}
-.shop:hover .header__sublink {
-    display: block;
-}
 
 .path{
     margin-top: 50px;
@@ -241,11 +178,12 @@ h1{
 h2{
     font-size: 25px;
     margin-left: 50px;
+    letter-spacing: 3px;
 }
 .product_details img{
     width: 100%;
 }
-ul{
+.product_details ul{
     font-size: 25px;
     margin: 50px 0 20px 50px;
     
@@ -327,7 +265,8 @@ iframe{
     left: -25%;
 }
 .comment_content p{
-    line-height: 1.5;
+    color: rgba(0, 0, 0, 0.904);
+    line-height: 1.6;
     word-wrap: break-word;
 }
 .good_comment .comment_item:nth-child(odd){

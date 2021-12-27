@@ -1,0 +1,226 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    padding-top: 50px;
+    font-family: 'Noto Sans TC', sans-serif;
+    width: 100%;
+    max-width: 1263px;
+    margin: auto;
+}
+header ul { /* 取消ul預設的內縮及樣式 */
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul.drop-down-menu {
+    display: inline-block;
+    margin-right: 90px;
+}
+
+ul.drop-down-menu li {
+    position: relative;
+    white-space: nowrap;
+}
+
+ul.drop-down-menu > li:last-child {
+    border-right: none;
+}
+
+ul.drop-down-menu > li {
+    float: left; /* 只有第一層是靠左對齊*/
+}
+
+ul.drop-down-menu a{
+    text-decoration: none;
+    padding: 15px 20px;
+    transition: .3s;
+    letter-spacing: 3px;
+    display: block;
+}
+.link{
+    color: rgba(0, 0, 0, 0.89);
+    transform: translateY(0);
+    font-size: 20px;
+}
+.link:hover{
+    transform: translateY(-5px); 
+}
+/* 裝飾線 */
+.link:after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    bottom: 3px;
+    height: 0;
+    border-bottom: 1px solid #3D2C07;
+    transition: .3s;
+}
+.link:hover:after{
+    left: 0;
+    right: 0;
+}
+ul.drop-down-menu li:hover > a:after { /* 滑鼠移入次選單上層裝飾線不變*/
+    left: 0;
+    right: 0;
+}
+
+ul.drop-down-menu ul {
+    border-radius: 3px;
+    background-color:#e2dcd2dc;
+    position: absolute;
+    z-index: 99;
+    left: -15px;
+    top: 100%;
+    min-width: 100px;
+}
+.sub_link ul{
+    min-width: 70px;
+}
+.sub_link ul li{
+    font-size: 15px;
+    text-align: center;
+}
+.sub_link a{
+    color: #3d2c07;
+}
+.sub_link a:hover{
+    background-color: #3d2c07;
+    color: blanchedalmond;
+}
+
+ul.drop-down-menu ul li {
+    border-bottom: #3d2c07be 1px solid;
+}
+
+ul.drop-down-menu ul li:last-child {
+    border-bottom: none;
+}
+
+ul.drop-down-menu ul ul {
+    /*第三層以後的選單出現位置與第二層不同*/
+    z-index: 999;
+    top: 10px;
+    left: 100%;
+}
+
+ul.drop-down-menu ul { /*隱藏次選單*/
+    display: none;
+}
+
+ul.drop-down-menu li:hover > ul { /* 滑鼠滑入展開次選單*/
+    display: block;
+}
+
+
+/* #on_page::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 7px;
+    height: 0;
+    border-bottom: 1.5px solid #3D2C07;
+} */
+#on_page{
+    background-color: #3d2c07e0;
+    color: rgba(255, 235, 205, 0.918);
+}
+header{
+    background-color: #bcaf9bdc;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height:50px;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    display: flex;
+    z-index: 99;
+}
+.header_icon{
+    height: 30px;
+    margin-right: 10px;
+    display: flex;
+}
+.header_icon a{
+    transform: translateY(0);
+    transition: .3s;    
+}
+.header_icon a:hover{
+    transform: translateY(-5px);
+}
+.logo{
+    display: block;
+    margin-left: 50px;
+}
+.logo img{
+    width: 200px;
+}
+
+
+  /* footer */
+footer{
+    background-color: 
+    #3D2C07;
+    height: 175px;
+    color: rgba(247, 245, 243, 0.794);
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items:flex-start;
+    padding-top: 50px;
+    letter-spacing: 1px; 
+}
+.contact{
+    margin: 0 30px;
+}
+.guideline{
+    margin:0 30px;
+}
+.contact p,.guideline p{
+    line-height: 1.5;
+}
+.guideline a{
+    color: rgba(247, 245, 243, 0.794);
+    text-decoration: none;
+    display: block;
+
+}
+.follow{
+    margin:0 30px;
+}
+.follow h3{
+    text-align: center;
+}
+.fb{
+    margin: 0 30px;    
+}
+#fb_banner{
+    width: 300px;
+}
+footer h3{
+    font-size: 18px;
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
+
+/* copyright */
+.copyright{
+    display: block;
+    font-size: 10px;
+    color: #fcfcfca8;
+    background-color: #3D2C07;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    letter-spacing: 1px;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid #bcaf9ba8;
+    line-height: 1.2;
+}
