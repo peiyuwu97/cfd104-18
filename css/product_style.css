@@ -83,9 +83,15 @@ h1{
 .large_pic{
     width: 388px;
     height: 385px;
-    overflow:hidden;
+    position: relative;
 }
-
+#frame{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
 .price{
     font-size: 28px;
     display: inline-block;
