@@ -257,6 +257,7 @@ ul{
     background-position: 20px;
     background-size: 0.3rem 0.3rem;
     text-indent:3em;
+    letter-spacing: 1px;
 }
 /* table */
 tbody,tr{
