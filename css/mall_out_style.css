@@ -209,14 +209,14 @@ a{
     }
     .banner_pic{
         display: flex;
-        justify-content:center ;
+        justify-content:center;
         background-image:none;
         overflow: hidden;
         height: 350px;
     }
     .banner_pic img{
+        /* width: 100%; */
         display: block;
-        position: relative;
     }
 
 }
