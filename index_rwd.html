@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>汪式漫步｜首頁</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index_style_rwd.css">
+    <link rel="stylesheet" href="css/header_final.css">
+    <link rel="stylesheet" href="css/classification.css">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/owl.theme.default.min.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style> 
+/* 手機 */
+@media screen and (max-width:768px){
+    .hot_product_banner{
+        display: none;
+    }
+    .hot_product_item img{
+        width: 150px;
+    }
+    .product{
+        display: flex;
+        justify-content: center;
+    }
+    .product_name,.price{
+        font-size: 15px;
+    }
+    .more{
+        left: calc(50% - 35px);
+    }
+
+
+    .owl-carousel .owl-item img{
+        width: 50px;
+    }
+    .news_pic{
+        width: 300px;
+    }
+    #five{
+        top: 30px;
+        right: -10px;
+        width: 50px;
+    }
+    #sale{
+        width: 200px;
+        height: 35px;
+        top: -30px;
+    }
+    #discount_pic::after{
+        top: 54px;
+    }
+    .mainpage_title{
+        display: none;
+    }
+
+}
+/* 手機以上 */
+@media screen and (min-width:768px){
+    .comment_item{
+    width: 70%;
+    display: flex;
+    align-items:center;   
+    margin: 0 auto;
+    justify-content: space-evenly; 
+    }
+    .user_pic{
+        width: 200px;
+        height: 200px;
+        overflow: hidden;
+    }
+    .comment_content{
+        width: 300px;
+    }
+    .comment_content p{
+        font-size: 15px;
+        padding: 20px;
+    }
+    .recommend:last-child{
+        margin-top: 200px;
+    }
+    .here_to_buy,.here_to_buy.here_to_buy_reverse{
+        left: 250px;
+    }
+}
+/* 平板以下 */
+@media screen and (max-width:996px){
+    .main_slider img {
+    position: relative;
+    }
+    .product_class{
+        display: flex;
+        justify-content: center;
+    }
+    .product_icon_banner{
+        display: none;
+    }
+    .product_icon img{
+        width: 30px;
+    }
+    .classification{
+        height: 0;
+    }
+    .class_title{
+        display: none;
+    }
+    .product_icon{
+        display: unset;
+        width: 100%;
+    }
+    .out_icon,.in_icon{
+        justify-content:center;
+        top: 0;
+    }
+
+    .location_content{
+        display: none;
+    }
+    .dotted_line{
+        display: none;
+    }
+    .location{
+        width: 100%;
+    }
+    .location_content{
+        position: absolute;
+        z-index: 2;
+        background-color:#e2dbc4e3;
+        padding: 10px;
+        box-sizing: border-box;
+        width: 300px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 5px #3F2E11;
+    }
+    .location_content p{
+        margin-top: 20px;
+        font-size: 13px;
+    }
+    .shop_name{
+        display: block;
+        position: absolute;
+        right: 10px;
+    }
+    #shopImg{
+        width: 100%;
+    }
+    #close{
+        display: block;
+        width: 30px;
+        height: 30px;
+        padding: 3px;
+        right: 15px;
+        top: 15px;
+        background-color: unset;
+        border-radius: 50%;
+        border: none;
+        box-shadow: 0px 0px 5px #3F2E11;
+        color: #3f2e11ed;
+    }
+    .choose_item{
+        display: unset;
+        width: 100%;
+        margin: 0 auto;
+        box-shadow: 0 0 5px 1px #3D2C07;
+    }
+
+    .measure{
+        display: block;
+        flex-wrap: nowrap;
+        position: unset;
+        width: 240px;
+        padding: 20px;
+        box-shadow: 0 0 5px 1px #3D2C07;
+    }
+    
+    .measure h2{
+        margin-top: 10px;
+        text-align: center;
+    }
+    .range_bar{
+        margin-top: 30px;
+        background-color: rgb(246, 248, 245);
+        padding: 10px;
+        position: unset;
+        
+    }
+    #buy_now{
+        left: calc(50% - 55px);
+    }
+}
+/* 平板以上 */
+@media screen and (min-width:996px){
+    .main_slider{
+        height: 450px;
+    }
+    .new_item{
+        display: flex;
+        flex-direction: row-reverse;
+    } 
+}
+/* banner */
+.carousel-control-prev-icon{
+      position: absolute;
+      background-image: url(img/slider_btn.png);
+    }
+    .carousel-control-next-icon {
+      background-image: url(img/slider_btn.png);
+      -moz-transform:scaleX(-1);
+      -webkit-transform:scaleX(-1);
+      -o-transform:scaleX(-1);
+      transform:scaleX(-1);
+    }
+    .carousel-indicators {
+    position: absolute;
+    right: 0;
+    bottom: -50px;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    padding: 5px 0;
+    margin-right: 15%;
+    margin-bottom: 1rem;
+    margin-left: 15%;
+    list-style: none;
+    }
+    .carousel-indicators [data-bs-target].active{
+      opacity: 1;
+    }
+    .carousel-indicators [data-bs-target]:hover {
+      opacity: 1;
+    }
+    .carousel-indicators [data-bs-target]{
+    box-sizing: content-box;
+    flex: 0 1 auto;
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    margin-right: 3px;
+    margin-left: 3px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: rgb(77, 53, 32);
+    background-clip: padding-box;
+    border: 0;
+    border-radius: 50%;
+    opacity: .7;
+    transition: opacity .6s ease;
+    }
+    .carousel-item img{
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+
+/* ---brand_slider--- */
+.brand_slider{
+        display: flex;
+        justify-content: center;
+}
+.owl-carousel{
+        position: relative;
+        width: 80%;
+    }
+    .owl-nav .owl-prev,.owl-nav .owl-next{
+        position: absolute;
+        display: block;
+        width: 30px;
+        height: 30px;
+        top: 25%;
+    }
+    .owl-nav .owl-prev{
+        left: -15px;
+    }
+    .owl-nav .owl-next{
+        right: -20px;
+    }
+    /* dots */
+    .owl-theme .owl-dots .owl-dot span {
+    background: #d1c7a8;
+    margin-top: 20px;
+    }
+    .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+    background: #463a16;
+    }
+    .owl-carousel .owl-item img{
+        width: 100px;
+        margin: 10px 0;
+        box-sizing: border-box;
+        margin-left: 20px;
+        box-shadow: 1px 1px 5px #3F2E11;
+    }
+    element.style {
+    width: 200px;
+    }
+/* ---brand_slider--- */
+
+</style>
+
+</head>
+<body>
+<!-- header -->
+<header>
+    <a class="logo" href="index_rwd.html"><img src="img/logo.png" alt="logo"></a>
+    <ul class="drop-down-menu">
+        <li><a class="link">商店</a>
+            <ul class="sub_link">
+                <li><a href="mall.html">所有商品</a></li>
+                <li><a href="mall_out.html">外出用品</a>
+                    <ul>
+                        <li><a href="harness.html">項圈</a>
+                        </li>
+                        <li><a href="harness.html">牽繩</a>
+                        </li>
+                        <li><a href="harness.html">胸背帶</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="mall_in.html">居家用品</a>
+                    <ul>
+                        <li><a href="harness.html">玩具</a></li>
+                        <li><a href="harness.html">餐具</a></li>
+                        <li><a href="harness.html">睡窩</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </li>
+        <li><a class="link" href="news.html">最新消息</a></li>
+        <li><a class="link" href="good_comment.html">商品評價</a></li>
+        <li><a class="link" href="location_rwd.html">通路資訊</a></li>
+
+    </ul>
+    <div class="header_icon">
+        <a href=""><img class="header_icon" src="img\icon\header_icon\資產 6.png" alt="searach"></a>
+        <a href="login.html"><img class="header_icon" src="img\icon\header_icon\cart.png" alt="cart"></a>
+        <a href="login.html"><img class="header_icon" src="img\icon\header_icon\login.png" alt="login"></a>            
+    </div>
+
+</header>
+
+<header class="header_rwd">
+    <input type="checkbox" id="menu_control">
+    <label for="menu_control" class="menu_btn">
+        <span>選單</span>
+    </label>
+    <a class="logo" href="index_rwd.html">
+        <img src="img/logo.png" alt="logo">
+    </a>
+
+    <a href="">
+        <img class="header_icon" src="img\icon\header_icon\cart.png" alt="cart">
+    </a>
+    <nav>
+        <a class="small_a" href=""><img src="https://cdn-icons-png.flaticon.com/512/2089/2089805.png" alt=""> 搜尋</a>
+        <a class="small_a" href="login.html"><img src="https://cdn-icons-png.flaticon.com/512/2089/2089827.png" alt=""> 登入</a>
+        <ul class="shopping_mall">
+            <li><a>商店 <img id="arrow1" src="https://cdn-icons-png.flaticon.com/512/271/271210.png" alt=""></a></li>
+            <li><a class="small_a mall_sub_rwd" href="mall.html">所有商品</a></li>
+
+            <li class="out_li"><a class="small_a mall_sub_rwd">外出用品 <img id="arrow2" src="https://cdn-icons-png.flaticon.com/512/271/271210.png" alt=""></a>
+                <ul class="out_ul" style="display: none;">
+                    <a class="sublink" href="mall_out.html">
+                        <li >▮ 戶外 ▮</li>
+                    </a>
+                    <a class="sublink" href="harness.html">
+                        <li >項圈</li>
+                    </a>
+                    <a class="sublink" href="harness.html">
+                        <li >牽繩</li>
+                    </a>
+                    <a class="sublink" href="harness.html">
+                        <li >胸背帶</li>
+                    </a>
+                </ul>
+            </li>
+            <li class="in_li"><a class="small_a mall_sub_rwd">居家用品 <img id="arrow3" src="https://cdn-icons-png.flaticon.com/512/271/271210.png" alt=""></a>
+                <ul class="in_ul" style="display: none;">
+                    <a class="sublink" href="mall_in_rwd.html">
+                        <li>▮ 居家 ▮</li>
+                    </a>
+                    <a class="sublink" href="harness.html">
+                        <li>玩具</li>
+                    </a>
+                    <a class="sublink" href="harness.html">
+                        <li>餐具</li>
+                    </a>
+                    <a class="sublink" href="harness.html">
+                        <li>睡窩</li>
+                    </a>
+                </ul>
+            </li>
+        </ul>
+        <script>
+            $(function(){
+                $('.shopping_mall').find('li').first().click(function(){
+                    $('#arrow1').toggleClass('opened');
+                    $(this).nextAll().toggle();
+                }).nextAll().hide();
+                
+                $('.out_li').click(function(){
+                    $('.out_ul').toggle();
+                    $('#arrow2').toggleClass('opened');
+                });
+                $('.in_li').click(function(){
+                    $('.in_ul').toggle();
+                    $('#arrow3').toggleClass('opened');
+                });
+
+            });
+        </script>
+
+        <a href="news.html">最新消息</a>
+        <a href="good_comment.html">商品評價</a>
+        <a href="location_rwd.html">通路資訊</a>
+    </nav>
+</header>
+
+<!-- banner -->
+<div id="imgGallary" class="main_slider">
+    <img src="https://shoplineimg.com/5799db4e6170697a07fe0a00/61b6cb24542a67001d833cc9/2000x.webp?source_format=jpg" alt="" width="100%" />
+    <img src="img/banner001.jpg" style="display: none" width="100%" />
+    <img src="https://shoplineimg.com/5799db4e6170697a07fe0a00/5f047b47497de000211383d8/2000x.webp?source_format=jpg" style="display: none" width="100%" />
+    <img src="https://shoplineimg.com/5799db4e6170697a07fe0a00/6124a4d31c55490014efc0e6/2000x.webp?source_format=jpg" style="display: none" width="100%" />
+    <img src="https://shoplineimg.com/5799db4e6170697a07fe0a00/61b6cb24542a67001d833cc9/2000x.webp?source_format=jpg" style="display: none" width="100%" />
+    <!-- <p class="slogan scaleDraw">Enjoy Your Strolling Time</p> -->
+</div>
+
+<script>
+var dots = document.getElementsByClassName('main_slider_dot'); //陣列
+var i = 0;
+(function(){
+        var imgLen = document.getElementById('imgGallary');
+        var images = imgLen.getElementsByTagName('img');
+        var counter = 1;
+        var i = 1;
+        if(counter <= images.length){
+            setInterval(function(){
+                images[0].src = images[counter].src;
+                console.log(images[counter].src);
+                counter++;
+                if(counter === images.length){
+                    counter = 1;
+                }
+            },4000);
+        }
+
+})();
+        
+</script>
+<!-- <script>
+    $('.main_slider').each(function(){
+    
+    let slideImgs = $(this).find('img'),
+        slideImgsCount = slideImgs.length,
+        currentIndex = 0;
+    
+    slideImgs.eq(currentIndex).fadeIn();
+    
+    setInterval(showNextSlide, 5000);
+    
+    function showNextSlide(){
+        let nextIndex = (currentIndex + 1) % slideImgsCount;
+        console.log(nextIndex)
+        slideImgs.eq(currentIndex).fadeOut();
+        slideImgs.eq(nextIndex).fadeIn();
+        currentIndex = nextIndex;
+    }
+}) -->
+</script>
+<!-- 分類 -->
+    <section class="classification">
+        <div class="product_icon_banner out_banner">
+        </div>
+        <div class="product_icon_banner in_banner">
+        </div>
+    </section>
+    
+    <!-- product_icon -->
+    <section class="product_icon">
+        <div class="product_class"><h1>商品分類</h1></div>
+        <div class="out">
+            <div class="class_title out_title" >
+                <h1><a href="mall_out.html">外出用品</a></h1>
+            </div> 
+
+            <div data-aos="fade-right" data-aos-duration="1000" class="out_icon">
+                <div>
+                    <a href="harness.html"><img class="scaleDraw" src="img/icon/class/collar.png" alt=""></a>
+                    <h2>項圈</h2>
+                    <h3>collar</h3>
+                </div>
+                <div>
+                    <a href="harness.html"><img class="scaleDraw" src="img/icon/class/leash.png" alt=""></a>
+                    <h2>牽繩</h2>
+                    <h3>leash</h3>
+                </div>
+                <div>
+                    <a href="harness.html"><img class="scaleDraw" src="img/icon/class/harness.png" alt=""></a>
+                    <h2>胸背帶</h2>
+                    <h3>harness</h3>
+                </div>
+            </div>
+        </div>
+        
+        <div class="in">
+    
+            <div class="class_title in_title" >
+                <h1><a href="mall_in.html">居家用品</a></h1>
+            </div>
+    
+            <div data-aos="fade-left" data-aos-duration="1000" class="in_icon">
+                <div>
+                    <a href="harness.html"><img class="scaleDraw" src="img/icon/class/rope-toy.png" alt=""></a>
+                    <h2>玩具</h2>
+                    <h3>toy</h3>
+                </div>
+                <div>
+                    <a href="harness.html"><img class="scaleDraw" src="img/icon/class/dog-bowl.png" alt=""></a>
+                    <h2>餐具</h2>
+                    <h3>bowl</h3>
+                </div>
+                <div>
+                    <a href="harness.html"><img class="scaleDraw" src="img/icon/class/doghouse.png" alt=""></a>
+                    <h2>睡窩</h2>
+                    <h3>doghouse</h3>
+                </div>
+            </div>    
+        </div>
+    </section>
+    <!-- hot_product -->
+    <section class="hot_product" >
+
+        <div class="mainpage_title" >
+            <img src="img/border_long.jpg" alt="" style="height: 10px;" >
+            <h1>熱銷商品</h1>
+            <img src="img/border_long.jpg" alt="" style="height: 10px;transform: rotate(180deg)" >
+        </div>
+        <div class="hot_product_banner">
+        </div>
+
+        <div class="banner_rwd hot_product_banner_rwd">
+            <img src="img/hot_product.jpg" alt="">
+            <h1>熱銷商品</h1>
+        </div>
+
+        <div data-aos="fade-up" data-aos-duration="2000" class="hot_product_item container">
+            <div class="row">
+                <div class="product col-6 col-md-3">
+                    <a href="product.html" class="pic">
+                        <div class="product_tag">
+                            <!-- <div class="new_tag">
+                                <p>HOT</p>
+                            </div> -->
+                            <img src="img/product/product05.jpg" alt="ppark">
+                        </div>
+                        <h2 class="product_name">經典工字型胸背帶</h2>
+                        <h2 class="price">NT$1,190</h2>
+                    </a>
+                </div>
+                <div class="product col-6 col-md-3">
+                    <a href="product.html" class="pic">
+                        <div class="product_tag">
+                            <!-- <div class="new_tag">
+                                <p>HOT</p>
+                            </div> -->
+                            <img src="img/product/product04.jpg" alt="">
+                        </div>
+                        <h2 class="product_name">多功能尼龍牽繩</h2>
+                        <h2 class="price">NT$790</h2>
+                    </a>
+                </div>
+                <div class="product col-6 col-md-3">
+                    <a href="product.html" class="pic">
+                        <div class="product_tag">
+                            <!-- <div class="new_tag">
+                                <p>HOT</p>
+                            </div> -->
+                            <img src="img/product/product01.jpg" alt="">
+                        </div>
+                        <h2 class="product_name">好眠寵物睡墊</h2>
+                        <h2 class="price">NT$1,890</h2>
+                    </a>
+                </div>
+                <div class="product col-6 col-md-3">
+                    <a href="product.html" class="pic">
+                        <div class="product_tag">
+                            <!-- <div class="new_tag">
+                                <p>HOT</p>
+                            </div> -->
+                            <img src="img/product/product02.jpg" alt="">
+                        </div>
+                        <h2 class="product_name">木製加高寵物碗</h2>
+                        <h2 class="price">$1,280</h2>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <a href="mall.html" class="more">
+            more →
+        </a>
+    </section>
+
+    <!-- brand -->
+    
+    <section class="brand">
+        <div style="display: flex;" class="mainpage_title" >
+            <img src="img/border_long.jpg" >
+            <h1>精選品牌</h1>
+            <img src="img/border_long.jpg" alt="" style="transform: rotate(180deg)" >
+        </div>
+
+
+        <div data-aos="flip-up" data-aos-duration="2000" class="brand_slider">    
+            <div class="owl-carousel owl-theme">
+                <div class="my-content">
+                    <a href="">
+                        <img class="brand_logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4O0R7AWmejdTaSgBBsktPiP2ZnJx2dxpfZwJCLarONbmzUCl9OTW4rWHhk1DFlbCqK1g&usqp=CAU" alt="carhartt">
+                    </a>
+                </div>
+                <div class="my-content">
+                    <a href="">
+                        <img class="brand_logo" src="img/brand/tail&me.jpg" alt="tail&me">
+                    </a>
+                </div>
+                <div class="my-content">
+                    <a href="">
+                        <img class="brand_logo" src="img/brand/BITE ME.jpg" alt="bite me">
+                    </a>
+                </div>
+                <div class="my-content">
+                    <a href="">
+                        <img class="brand_logo" src="img/brand/ezydog.jpg" alt="ezydog">
+                    </a>
+                </div>
+                <div class="my-content">
+                    <a href="">
+                        <img class="brand_logo" src="img/brand/SPUTNIK.jpg" alt="sputnik">
+                    </a>
+                </div>
+                <div class="my-content">
+                    <a href="">
+                        <img class="brand_logo" src="img/brand/the hill.png" alt="the hill">
+                    </a>
+                </div>
+                <div class="my-content">
+                    <a href="">
+                        <img class="brand_logo" src="img/brand/ppark.jpg" alt="ppark">
+                    </a>
+                </div>
+                <div class="my-content">
+                    <a href="">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXs4ez00cIjkPSeps5KiqYvuFzjpK3gpT37OAYsPvrX4sGt3lMERp6o9MqLs0s7i-akIE&usqp=CAU" alt="kong">
+                    </a>
+                </div>
+                <div class="my-content">
+                    <a href="">
+                        <img class="brand_logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4O0R7AWmejdTaSgBBsktPiP2ZnJx2dxpfZwJCLarONbmzUCl9OTW4rWHhk1DFlbCqK1g&usqp=CAU" alt="carhartt">
+                    </a>
+                </div>
+                <div class="my-content">
+                    <a href="">
+                        <img class="brand_logo" src="img/brand/tail&me.jpg" alt="tail&me">
+                    </a>
+                </div>
+                <div class="my-content">
+                    <a href="">
+                        <img class="brand_logo" src="img/brand/BITE ME.jpg" alt="bite me">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="owl.carousel.min.js"></script>
+        <script>
+            $(document).ready(function(){
+    
+            $(".owl-carousel").owlCarousel({
+        loop:true,
+        margin:10,
+        responsiveClass:true,
+        responsive:{
+            0:{
+                items:3,
+                nav:false
+            },
+            600:{
+                items:4,
+                nav:false
+            },
+            1000:{
+                items:7,
+                nav:true,
+            }
+        }
+        });
+    
+            });
+        </script>
+        <!-- <div class="brand_img">
+            <img class="slider_btn" src="img/slider_btn.png" alt="">
+            <a href="">
+                <img class="brand_logo" src="img/brand/tail&me.jpg" alt="tail&me">
+            </a>
+            <a href="">
+                <img class="brand_logo" src="img/brand/the hill.png" alt="the hill">
+            </a>
+            <a href="">
+                <img class="brand_logo" src="img/brand/SPUTNIK.jpg" alt="sputnik">
+            </a>
+            <a href="">
+                <img class="brand_logo" src="img/brand/ezydog.jpg" alt="ezydog">
+            </a>
+            <a href="">
+                <img class="brand_logo" src="img/brand/BITE ME.jpg" alt="bite me">
+            </a>
+            <a href="">
+                <img class="brand_logo" src="img/brand/furlegs.jpg" alt="furlegs">
+            </a>
+            <img class="slider_btn" style="transform: rotate(180deg);" src="img/slider_btn.png" alt="">
+
+        </div> -->
+
+
+    </section>
+
+<!-- 註冊會員折扣 -->
+<div data-aos="fade-up" data-aos-duration="3000" class="register_for_discount">
+    <div style="display: flex;" class="mainpage_title" >
+        <img src="img/border_long.jpg" >
+        <h1>JOIN US</h1>
+        <img src="img/border_long.jpg" alt="" style="transform: rotate(180deg)" >
+    </div>
+    <a  href="register.html">
+        <img id="register_banner" src="https://cdn.store-assets.com/s/312458/f/7639299.jpeg?width=1500&format=webp" alt="">
+    </a>
+</div>
+
+    <!-- new -->
+    <section class="new">
+        <div style="display:flex " class="mainpage_title" >
+            <img src="img/border_long.jpg" alt="" >
+            <h1>最新消息</h1>
+            <img src="img/border_long.jpg" alt="" style="transform: rotate(180deg)" >
+        </div>
+        <div class="new_item" >
+            <div data-aos="fade-left" data-aos-duration="2000" class="news_a" style="position: relative;">
+                <a href="news.html">
+                    <img src="img/sale.png" alt="sale" id="sale">
+                    <div id="discount_pic" style="position: relative;"> 
+                        <img  class="news_pic" src="img/banner10.jpg" alt="news_pic">
+                        <img src="img/五倍券_方.png" alt="5000" id="five">
+                    </div> 
+                </a>
+            </div>
+
+            <div data-aos="fade-right" data-aos-duration="2000" style="margin: 30px;" id="new_content">
+                <div class="news_info">
+                    <h3>2022/01台北寵物用品展 ｜Taipei Pets Show</h3>
+                    <p style="margin-bottom: 30px;">
+                        台北南港寵物展 － 資訊<br>
+                        時間｜2022/01/01 (六) - 01/02 (日)&ensp; 10:00~18:00<br>
+                        展館｜台北南港展覽館1館<br>
+                        地址｜台北市南港區經貿二路1號<br>
+                        位置｜J317 聯合東方<br>
+                    </p>
+                    <a style="display: block;" href="news.html">Read more →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- good_comment -->
+    <section class="good_comment">
+        
+        <div style="display:flex" class="mainpage_title" >
+            <img src="img/border_long.jpg" >
+            <h1>好評推薦</h1>
+            <img src="img/border_long.jpg" style="transform: rotate(180deg)" >
+        </div>
+        <!-- 商品標題 -->
+        <div class="recommend">
+            <div style="display:flex" class="comment_title" >
+                <img class="par" src="img/par.jpg" alt="" >
+                <h2>尾巴與我－尼龍牽繩&胸背</h2>
+                <img class="par" src="img/par.jpg" alt="" style="transform: rotate(180deg)" >
+            </div>
+
+            <div class="for_flex">
+                <div class="comment_item">
+                    <img data-aos="fade-down-right" data-aos-duration="2000" class="user_pic" src="img/comment_1.jpg" alt="comment_1">
+                    <div data-aos="fade-up-left" data-aos-duration="2000" class="comment_content">
+                        <p>超喜歡尾巴與我的產品，顏色選擇多又容易穿脫，而且不會勒到我的氣管，還可以搭配配件，裝飾性和實用性都很高，散步也可以美美的了！</p>
+                        <a class="here_to_buy" href="product.html">這裡下單</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="recommend_line">
+            <img id="recommend_line" src="img/long_dotted_line.png" alt="">
+        </div>
+        <div class="recommend">
+            <div style="display:flex" class="comment_title" >
+                <img class="par" src="img/par.jpg" alt="" >
+                <h2>好眠寵物睡墊</h2>
+                <img class="par" src="img/par.jpg" alt="" style="transform: rotate(180deg)" >
+            </div>
+
+            <div class="for_flex">
+                <div class="comment_item for_reverse">
+                    <img data-aos="fade-down-left" data-aos-duration="2000" class="user_pic" src="img/comment_2.jpg" alt="comment_2">
+                    <div data-aos="fade-up-right" data-aos-duration="2000" class="comment_content">
+                        <p id="p2">讓我一覺好眠的神奇睡墊！可充氣的設計，重量非常輕，還能摺疊收納，攜帶很方便帶去民宿也適合，還附充氣幫浦，真是太貼心了～</p>
+                        <a class="here_to_buy here_to_buy_reverse" href="product.html">這裡下單</a>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- location -->
+    <section class="location">
+        <div style="display:flex" class="mainpage_title" >
+            <img src="img/border_long.jpg" >
+            <h1>通路資訊</h1>
+            <img src="img/border_long.jpg" style="transform: rotate(180deg)" >
+        </div>
+
+        <div class="location_item">
+            <!-- 店面 -->
+            <div data-aos="zoom-in-right" data-aos-duration="2000" class="location_content">
+                <h2 id="shopName">台北師大店</h2>
+                <img id="shopImg" class="store" src="img/location/shop1_3.jpg" alt="taipei_shop">
+                <p id="shopInfo">
+                地址：台北市大安區師大路36巷45號<br>
+                營業時間：周一至周日 10:00-19:00<br>
+                電話：02-2231-9898   
+                </p>
+                <!-- google連結 -->
+                
+                <a class="google_map" href=""> 
+                    <img src="https://www.google.com/images/branding/product/2x/maps_96in128dp.png" alt="google_map">
+                </a> 
+                <input type="button" id="close" value="✖">              
+            </div>
+
+            <!-- 虛線 -->
+            <img class="dotted_line" src="img/dotted_line.png" alt="dotted_line">
+
+            <!-- 地圖 -->
+            <div data-aos="zoom-in-left" data-aos-duration="2000" id="map">
+                <!-- icon -->
+                <a class="location_a" id="taipei_a">
+                    <div class="flash">
+                        <img class="location_icon taipei now_here" src="img/icon/map.png" alt="location_icon">
+                    </div>
+                    <h3 class="shop_name taipei_name">台北師大店</h3>
+                </a>
+                <a class="location_a" id="taichung_a">
+                    <div class="flash scaleDraw">
+                        <img class="location_icon taichung" src="img/icon/map.png" alt="location_icon">
+                    </div>
+                    <h3 class="shop_name taichung_name">台中公益店</h3>
+                </a>
+                <a class="location_a" id="tainan_a">
+                    <div class="flash scaleDraw">
+                        <img class="location_icon tainan" src="img/icon/map.png" alt="location_icon">
+                    </div>
+                    <h3 class="shop_name tainan_name">台南萬昌店</h3>
+                </a>
+                <!-- taiwan_map -->
+                <img class="taiwan" src="img/location/location.png" alt="taiwan">
+            </div>
+        </div>
+    </section>
+<script>
+    let taipei_a = document.getElementById("taipei_a");
+    let taichung_a = document.getElementById("taichung_a");
+    let tainan_a = document.getElementById("tainan_a");
+    let shopName = document.getElementById("shopName");
+    let shopImg = document.getElementById("shopImg");
+    let shopInfo = document.getElementById("shopInfo");
+    let tp = document.getElementsByClassName("location_icon")[0];
+    let tc = document.getElementsByClassName("location_icon")[1];
+    let tn = document.getElementsByClassName("location_icon")[2];
+    let flash = document.getElementsByClassName("flash");
+
+    let closex = document.getElementById("close");
+    let location_content = document.getElementsByClassName("location_content")[0];
+    function changeinfo1(){
+        shopName.innerText = "台北師大店";
+        shopImg.src = "img/location/shop1_3.jpg";
+        shopInfo.innerText = 
+            "地址：台北市大安區師大路36巷45號\n"+
+            "營業時間：周一至周日 10:00-19:00\n"+
+            "電話：02-2231-9898"
+        tp.classList.add("now_here");
+        tc.classList.remove("now_here");
+        tn.classList.remove("now_here");
+        flash[0].classList.remove("scaleDraw");
+        flash[1].classList.add("scaleDraw");
+        flash[2].classList.add("scaleDraw");
+        location_content.style.display = "block"
+    }
+    function changeinfo2(){
+        shopName.innerText = "台中公益店";
+        shopImg.src = "img/location/shop2_2.jpg";
+        shopInfo.innerText = 
+        "地址：台中市西區公益路168號\n"+
+        "營業時間：周一至周日 10:00-19:00\n"+
+        "電話：04-2431-3498"
+        tp.classList.remove("now_here");
+        tc.classList.add("now_here");
+        tn.classList.remove("now_here");
+        flash[1].classList.remove("scaleDraw");
+        flash[0].classList.add("scaleDraw");
+        flash[2].classList.add("scaleDraw");
+        location_content.style.display = "block"
+    }
+    function changeinfo3(){
+        shopName.innerText = "台南萬昌店";
+        shopImg.src = "img/location/shop3_2.jpg";
+        shopInfo.innerText = 
+        "地址：台南市中西區萬昌街55號\n"+
+        "營業時間：周一至周日 10:00-19:00\n"+
+        "電話：06-2299-0355"
+        tp.classList.remove("now_here");
+        tc.classList.remove("now_here");
+        tn.classList.add("now_here");
+        flash[2].classList.remove("scaleDraw");
+        flash[0].classList.add("scaleDraw");
+        flash[1].classList.add("scaleDraw");
+        location_content.style.display = "block"
+    }
+    function closelightbox(){
+        location_content.style.display = "none"
+        tp.classList.remove("now_here");
+        tc.classList.remove("now_here");
+        tn.classList.remove("now_here");
+        flash[0].classList.add("scaleDraw");
+        flash[1].classList.add("scaleDraw");
+        flash[2].classList.add("scaleDraw");
+    }
+    function init(){
+        taipei_a.onclick=changeinfo1;
+        taichung_a.onclick=changeinfo2;
+        tainan_a.onclick=changeinfo3;
+        closex.onclick=closelightbox;
+        if(document.body.clientWidth<996){
+            tp.classList.remove("now_here");
+            flash[0].classList.add("scaleDraw");
+        }
+    }
+    window.addEventListener("load",init,false);
+</script>
+    <section class="choose">
+        <div style="display:flex" class="mainpage_title" >
+            <img src="img/border_long.jpg" >
+            <h1 class="choose_size_title">挑選胸背帶尺寸</h1>
+            <img src="img/border_long.jpg" alt="" style="transform: rotate(180deg)" >
+        </div>
+
+        <div data-aos="flip-up" data-aos-duration="3000"  class="choose_item">
+            <div class="for_flex">
+                <div class="measure">
+                    <h2>測量方法</h2>
+                    <img id="size" src="img/size.png" alt="size">
+                    <p>用軟尺按照圖示位置進行測量，再另外預留2~3公分更佳，尺寸過小會造成狗狗呼吸困難！
+                    </p>
+                </div>
+            </div>
+            
+            <div class="for_flex">
+                <div class="range_bar">
+                    <h2>依據身材挑選適合胸背帶的尺寸</h2>
+                    <h3>頸圍</h3>
+                    <input type="range" id="neck_range" min="20" max="80" value="35" class="slider" oninput="change1()" onchange="change1()">
+                    <span id="neck_value">35</span>
+                    <span>公分</span>
+                
+                    <script type='text/javascript'>
+                        function change1() {
+                        var value = document.getElementById('neck_range').value ;
+                        document.getElementById('neck_value').innerHTML = value;
+                                    }
+                    </script>
+                    <h3>胸圍</h3>
+                    <input type="range" id="body_range" min="30" max="90" value="45" class="slider" oninput="change2()" onchange="change2()">
+                    <span id="body_value">45</span>
+                    <span>公分</span>
+                
+                    <script type='text/javascript'>
+                        function change2() {
+                        var value = document.getElementById('body_range').value ;
+                        document.getElementById('body_value').innerHTML = value;
+                                    }
+                    </script>
+                    <a href="" id="buy_now">立即挑選 →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+         <div class="go_top scaleDraw">
+            <p>TOP</p>
+            <img src="img/logo_small.png" alt="">
+         </div>
+         <script>
+             $('.go_top').click(function(){
+                $("html,body").animate({scrollTop: 0}, 1000);
+             });
+         </script>
+        <div class="footer">
+            <div class="contact">
+                <h3>聯絡我們</h3>
+                <p>
+                營業時間：周一至周五 09:30-18:00<br>
+                客服電話：03-1333-3111<br>
+                E-mail：service@gmail.com
+                </p>
+                <p id="contact_rwd">
+                周一至周五 09:30-18:00<br>
+                03-1333-3111<br>
+                service@gmail.com
+                </p>
+            </div>
+            <div class="guideline">
+                <h3>購物說明</h3>
+                <p>
+                <a href="">條款與細項</a>
+                <a href="">退換貨政策</a>
+                <a href="">付款與配送</a>
+                </p>
+            </div>
+            <div class="follow">
+                <h3>關注我們</h3>
+                <div id="follow_icon">
+                    <a href=""><img src="img/icon/fb.png" alt="fb"></a>
+                    <a href=""><img src="img/icon/ig.png" alt="ig"></a>
+                    <a href=""><img src="img/icon/line-1.png" alt="line"></a>
+                </div>
+            </div>
+            <div class="fb">
+                <a href=""><img class="fb_banner" src="img/fb_banner.png" alt="fb_banner"></a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="copyright">
+        <p>本網站為緯育TibaMe前端設計工程師班第xx期學員專題作品，本平台僅供學習、展示之用。<br>參考資源：Pinterest。若有侵權疑慮，您可以私訊TibaMe-前端設計工程師養成班，後續會由專人協助處理</p>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

@@ -7,10 +7,12 @@ body{
     padding-top: 50px;
     font-family: 'Noto Sans TC', sans-serif;
     width: 100%;
-    max-width: 1263px;
     margin: auto;
 }
-header ul { /* 取消ul預設的內縮及樣式 */
+header{
+    z-index: 999;
+}
+header ul{ /* 取消ul預設的內縮及樣式 */
     margin: 0;
     padding: 0;
     list-style: none;
@@ -19,6 +21,7 @@ header ul { /* 取消ul預設的內縮及樣式 */
 ul.drop-down-menu {
     display: inline-block;
     margin-right: 90px;
+    min-width: 482px;
 }
 
 ul.drop-down-menu li {
@@ -116,16 +119,6 @@ ul.drop-down-menu li:hover > ul { /* 滑鼠滑入展開次選單*/
     display: block;
 }
 
-
-/* #on_page::after{
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 7px;
-    height: 0;
-    border-bottom: 1.5px solid #3D2C07;
-} */
 #on_page{
     background-color: #3d2c07e0;
     color: rgba(255, 235, 205, 0.918);
@@ -165,7 +158,7 @@ header{
 
 
   /* footer */
-footer{
+.footer{
     background-color: 
     #3d2c07;
     height: 175px;
@@ -179,6 +172,9 @@ footer{
 }
 .contact{
     margin: 0 30px;
+}
+#contact_rwd{
+    display: none;
 }
 .guideline{
     margin:0 30px;
@@ -201,9 +197,13 @@ footer{
 .fb{
     margin: 0 30px;    
 }
-#fb_banner{
+.fb_banner_rwd{
+    display: none;
+}
+.fb_banner{
     width: 300px;
 }
+
 footer h3{
     font-size: 18px;
     margin-top: 5px;
@@ -224,4 +224,246 @@ footer h3{
     padding: 10px 0;
     border-top: 1px solid #bcaf9ba8;
     line-height: 1.2;
+}
+header.header_rwd{
+    display: none;
+}
+.contact_rwd{
+    display: none;
+}
+
+
+@media screen and (max-width:996px){
+    header{
+        display: none;
+    }
+    header.header_rwd{
+        display: flex;
+        width: 100%;
+        background-color: #bcaf9bdc;
+        position: fixed;
+        justify-content: center;
+        align-items: center;
+        box-shadow: unset;
+    }
+    .header_rwd .logo{
+        display: inline-block;
+        position: relative;
+        right: 30px;
+    }
+    .header_rwd .logo img{
+        vertical-align: middle;
+        width: 150px;
+    }
+    .header_rwd .header_icon{
+        position: absolute;
+        display: inline-block;
+        top: 10px;
+        right: 20px;
+        transform: translateY(0);
+        transition: .3s;
+    }
+    .header_rwd .header_icon:hover{
+        transform: translateY(-5px);
+    }
+    .menu_btn{
+        display: block;
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        top: 7.5px;
+        left: 20px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    .menu_btn span{
+        visibility: hidden;
+        position: absolute;
+    }
+    .menu_btn::before{
+        content: '';
+        position: absolute;
+        height: 2px;
+        left: 0;
+        right: 0;
+        width: 25px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        /* 漢堡 */
+        background-color: cornsilk;
+        box-shadow: 0 8px 0px cornsilk,0 -8px 0px cornsilk;
+    }
+    header.header_rwd nav{
+        width: 70%;
+        height: calc(100vh - 50px);
+        background-color: rgba(243, 241, 230, 0.863);
+        position:absolute;
+        top: 50px;
+        left: -100%;
+        display: block;
+        transition: 1s;
+    }
+    header.header_rwd nav a{
+        display: block;
+        line-height: 1.5;
+        letter-spacing: 2px;
+        padding: 10px 20px;
+        border-bottom: 2px solid #1813099b;
+        color:#3d2c07;
+    }
+    header.header_rwd nav a:hover{
+        color:cornsilk ;
+        background-color:rgba(56, 41, 8, 0.877) ;
+        transition: .3s;
+    }
+    .out_ul .sublink,.in_ul .sublink{
+        border-bottom:none;
+    }
+    /* 選前兩個 */
+    .small_a{
+        padding: 5px 20px;
+        font-size: 14px;
+    }
+    /* search login */
+    header.header_rwd nav img{
+        width: 15px;
+        vertical-align: middle;
+        filter: invert(16%) sepia(13%) saturate(3189%) hue-rotate(5deg) brightness(97%) contrast(94%);
+    }
+    header.header_rwd nav a:hover img{
+        filter: invert(91%) sepia(5%) saturate(2186%) hue-rotate(321deg) brightness(104%) contrast(120%);
+    }
+    .mall_sub_rwd{
+        text-indent: 20px;
+    }
+    .opened{
+        transform:rotate(180deg);
+        transition: .8s;
+    }
+    .sublink:nth-child(1){
+        text-indent: 40px;
+    }
+    .sublink{
+        letter-spacing: 1px;
+        text-indent: 50px;
+        color:#3d2c07;
+        font-size: 13px;
+    }
+    .sublink:hover{
+        color:cornsilk ;
+        background-color:rgba(56, 41, 8, 0.877) ;
+        transition: .3s;
+    }
+    #menu_control{
+        position: absolute;
+        display: none;
+    }
+    #menu_control:checked ~ nav{
+        left: 0;
+    }
+    .menu_btn:hover{
+        background-color:#3d2c0762;
+    }
+    #menu_control:checked ~ .menu_btn{
+        background-color: #3d2c0785;
+    }
+
+
+    /* footer */
+    footer{
+        display: flex;
+        justify-content: center;
+        height: unset;
+        width: 100%;
+    }
+    .contact,.guideline,.follow,.fb{
+        margin-bottom: 50px;
+    }
+    .footer{
+        display: block;
+        height: unset;
+        width: 100%;
+        text-align: center;
+    }
+    
+    footer h3{
+        letter-spacing: 3px;
+        position: relative;
+    }
+
+}
+/* 上下移動 */
+@keyframes scaleDraw{
+    0%{
+        transform:translateY(0); 
+    }
+    25%{
+        transform:translateY(-5px); 
+    }
+    50%{
+        transform:translateY(0);
+    }
+    75%{
+        transform:translateY(-5px); 
+    }
+}
+
+.scaleDraw{
+    -webkit-animation: scaleDraw 4s ease-in-out infinite;
+}
+/* 放大縮小 */
+@keyframes scaleBig{
+    0%{
+        transform:scale(1); 
+    }
+    25%{
+        transform:scale(0.9); 
+    }
+    50%{
+        transform:scale(1);
+    }
+    75%{
+        transform:scale(0.9); 
+    }
+}
+
+.scaleBig{
+    -webkit-animation: scaleBig 5s ease-in-out infinite;
+}
+
+footer{
+    position: relative;
+}
+.go_top{
+    position: absolute;
+    z-index: 99;
+    left: calc(50% - 30px);
+    top: -50px;
+    cursor: pointer;
+}
+.go_top:hover{
+    opacity: 0.8;
+}
+.go_top img{
+    width: 60px;
+    z-index: 99;
+}
+.go_top P{
+    text-align: center;
+    font-weight: 900;
+    color: #443617;
+    font-family: Lucida Console;
+}
+
+
+.anime{
+    animation-name: example;
+    animation-duration: 3s;  
+    animation-fill-mode: forwards;
+}
+
+@keyframes example {
+    from {right: 1000px;}
+    to {top: 20px;}
 }

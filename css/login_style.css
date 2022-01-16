@@ -73,14 +73,16 @@
     margin-top: 10px;
     padding-left: 15px;
 }
+.for_flex{
+    display: flex;
+    justify-content: center;
+}
 #login_btn{
     margin: 10px;
     width: 200px;
     padding: 10px 0;
     background-color: rgba(12, 8, 0, 0.822);
     border-radius: 10px;
-    position: relative;
-    left: 28%;
 }
 #login_btn h2{
     color: white;
@@ -106,4 +108,17 @@
 }
 #forget{
     left:-1%;
+}
+
+@media screen and (max-width:768px) {
+    .login_box{
+        width: 80%;
+    }
+    .login_by img{
+        margin:0 10px;
+        margin-right: 20px;
+    }
+    .login_by p{
+        font-size: 15px;
+    }
 }

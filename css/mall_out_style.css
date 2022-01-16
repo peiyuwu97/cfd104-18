@@ -2,11 +2,21 @@
 body{
     padding-top: 50px;
 }
+.document{
+    background-color: rgb(250, 249, 246);
+    z-index: 1;
+}
 /* path */
 .path{
     margin-top: 50px;
-    margin-left: 100px;
+    width: 100%;
+    /* margin-left: 100px; */
     color: rgb(59, 56, 56);
+    display: flex;
+    justify-content: center;
+}
+.path div{
+    width: 80%;
 }
 .path a{
     color:rgb(59, 56, 56);
@@ -22,6 +32,7 @@ body{
     vertical-align: middle;
     position: relative;
     background-image: url(../img/banner11.jpg);
+    /* 手機不支援 */
     background-attachment: fixed;
     background-position: center;
     opacity: 0.8;
@@ -97,8 +108,9 @@ body{
     margin:auto;
     justify-content: center;
 }
+/* 商品照片 */
 .hot_product_item img{
-    width:200px ;
+    width:200px;
     border: 1px solid #BCAF9B;
     box-shadow: 1px 1px 5px #3F2E11;
     opacity: 1;
@@ -112,17 +124,17 @@ body{
     flex-wrap: wrap;
     justify-content: center;
     padding:50px 0;
-    margin: 20px;
+    /* margin: 20px; */
 }
 .product{
-    margin:0px 30px;
+    /* margin:0px 30px; */
     margin-bottom: 30px;
     padding-bottom: 40px;
     align-items: center;
     text-align: center;
     position: relative; 
     box-sizing: border-box;
-    width: 211px;
+    /* background-color: #5f5c58; */
 }
 .new{
     position: relative;
@@ -171,47 +183,37 @@ a{
     left: 87%;
     bottom: 50px;
 }
- /* footer */
- .footer{
-    background-color: 
-    #3D2C07;
-    height: 175px;
-    color: rgba(247, 245, 243, 0.966);
-    display: flex;
-    margin: 0 auto;
-    justify-content: center;
-    align-items:flex-start;
-    padding-top: 50px;
-}
-.contact{
-    margin: 0 30px;
-}
-.guideline{
-    margin:0 30px;
-}
-.contact p,.guideline p{
-    line-height: 1.5;
-}
-.guideline a{
-    color: rgba(247, 245, 243, 0.966);
-    text-decoration: none;
-    display: block;
 
+@media screen and (max-width:996px) {
+    .product_name,.price{
+        font-size: 15px;
+    }
+    .hot_product_item img{
+        width: 150px;
+    }
+    .product_icon img{
+        margin: 0 20px;
+    }
 }
-.follow{
-    margin:0 30px;
-}
-.follow h3{
-    text-align: center;
-}
-.fb{
-    margin: 0 30px;    
-}
-#fb_banner{
-    width: 300px;
-}
-.footer h3{
-    font-size: 18px;
-    margin-top: 5px;
-    margin-bottom: 30px;
+@media screen and (max-width:380px) {
+    .banner_frame{
+        display: flex;
+        margin: 0 auto;
+        margin-top: 50px;
+        padding: 0; 
+        /* width: 80%; */
+        height: 400px;
+        /* background-color: #5f5c58; */
+        position: relative;
+    }
+    .banner_pic{
+        background-repeat: no-repeat;
+        background-position: -300px;
+        position: fixed;
+        left: 0;
+        right: 0;
+        margin-top: 0px;
+        z-index: -1;
+    }
+
 }

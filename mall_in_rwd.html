@@ -4,38 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>汪式漫步｜商品評價</title>
+    <title>汪式漫步｜居家用品</title>
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/mall_out_style.css">
     <link rel="stylesheet" href="css/header_final.css">
-    <link rel="stylesheet" href="css/good_comment_style.css">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/banner_style.css">
-    <link rel="stylesheet" href="css/page.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/grid.css">
     <script src="js/jquery.js"></script>
     <script src="js/jquery.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
-        a{
-            text-decoration: none;
+        .banner_pic{
+            background-image:url(img/in.jpeg);
+            background-size: cover;
+            background-repeat: no-repeat;
         }
-        .page{
-            margin-top: 20px;
+        @media screen and (max-width:996px){
+            .product_icon img{
+            width: 30px;
+            }
+            .out_title{
+                display: none;
+            }
         }
-        .banner_title{
-            text-shadow: 1px 1px 5px white;
+        @media screen and (max-width:500px){
+            /* .banner_pic{
+                background-size: contain; 
+            } */
         }
-    @media screen and (max-width:768px) {
-        .card{
-            display: block;
-        }
-        .content{
-            margin-top: 50px;
-        }
-    }
     </style>
 </head>
 <body>
-
 <!-- header -->
 <header>
     <a class="logo" href="index_rwd.html"><img src="img/logo.png" alt="logo"></a>
@@ -153,110 +152,143 @@
     </nav>
 </header>
 
-<div class="banner">
-    <div class="caption">
-        <img src="img/comment_banner_2.png" alt="">
-        <div class="banner_title">
-            <h1>商品評價</h1>
-            <p>Feedback</p>
-        </div>
-    </div>
-</div>    
 
-<section class="comment">
-    <div class="card" data-aos="fade-up" data-aos-duration="1000">
-        <a href="product.html" class="pic">
-            <img class="product_img" src="img/product/product06.png" alt="">
-            <h2 class="product_name">PETRICK<br>經典快扣式項圈</h2>
-            <h2 class="price">$480</h2>
-            <div class="text">
-                <p>前往商品頁</p>
-            </div>
-        </a>
-        <div class="content">
-            <p class="order_num">訂單後四碼：2890</p>
-            <img class="star" src="img/product/red_star.png" alt="star">
-            <p class="feedback">非常喜歡這個快扣式項圈，穿脫很方便，一秒就能扣上，顏色選擇也很多，可以依據衣服色系來做穿搭挑選，讓項圈變成狗狗的時尚配件！</p>
-            <p class="time">2021/12/19</p>
-        </div>
-    </div>
-    <div class="card" data-aos="fade-up" data-aos-duration="1000">
-        <a href="product.html" class="pic">
-            <img class="product_img" src="img/product/product05.jpg" alt="">
-            <h2 class="product_name">PETRICK<br>經典快扣式項圈</h2>
-            <h2 class="price">$980</h2>
-            <div class="text">
-                <p>前往商品頁</p>
-            </div>
-        </a>
-        <div class="content">
-            <p class="order_num">訂單後四碼：3903</p>
-            <img class="star" src="img/product/red_star.png" alt="star">
-            <p class="feedback">非常喜歡這個快扣式項圈，穿脫很方便，一秒就能扣上，顏色選擇也很多，可以依據衣服色系來做穿搭挑選，讓項圈變成狗狗的時尚配件！</p>
-            <p class="time">2021/12/17</p>
-        </div>
-    </div>
-    <div class="card" data-aos="fade-up" data-aos-duration="1000">
-        <a href="product.html" class="pic">
-            <img class="product_img" src="img/product/product01.jpg" alt="">
-            <h2 class="product_name">PETRICK<br>經典快扣式項圈</h2>
-            <h2 class="price">$900</h2>
-            <div class="text">
-                <p>前往商品頁</p>
-            </div>
-        </a>
-        <div class="content">
-            <p class="order_num">訂單後四碼：9876</p>
-            <img class="star" src="img/product/red_star.png" alt="star">
-            <p class="feedback">非常喜歡這個快扣式項圈，穿脫很方便，一秒就能扣上，顏色選擇也很多，可以依據衣服色系來做穿搭挑選，讓項圈變成狗狗的時尚配件！</p>
-            <p class="time">2021/12/13</p>
-        </div>
-    </div>
-    <div class="card" data-aos="fade-up" data-aos-duration="1000">
-        <a href="product.html" class="pic">
-            <img class="product_img" src="img/product/product03.jpg" alt="">
-            <h2 class="product_name">PETRICK<br>經典快扣式項圈</h2>
-            <h2 class="price">$480</h2>
-            <div class="text">
-                <p>前往商品頁</p>
-            </div>
-        </a>
-        <div class="content">
-            <p class="order_num">訂單後四碼：3459</p>
-            <img class="star" src="img/product/red_star.png" alt="star">
-            <p class="feedback">非常喜歡這個快扣式項圈，穿脫很方便，一秒就能扣上，顏色選擇也很多，可以依據衣服色系來做穿搭挑選，讓項圈變成狗狗的時尚配件！</p>
-            <p class="time">2021/12/10</p>
-        </div>
-    </div>
-    <div class="card" data-aos="fade-up" data-aos-duration="1000">
-        <a href="product.html" class="pic">
-            <img class="product_img" src="img/product/product07.png" alt="">
-            <h2 class="product_name">PETRICK<br>經典快扣式項圈</h2>
-            <h2 class="price">$480</h2>
-            <div class="text">
-                <p>前往商品頁</p>
-            </div>
-        </a>
-        <div class="content">
-            <p class="order_num">訂單後四碼：2316</p>
-            <img class="star" src="img/product/red_star.png" alt="star">
-            <p class="feedback">非常喜歡這個快扣式項圈，穿脫很方便，一秒就能扣上，顏色選擇也很多，可以依據衣服色系來做穿搭挑選，讓項圈變成狗狗的時尚配件！</p>
-            <p class="time">2021/12/06</p>
-        </div>
+<section class="path">
+    <div>
+        <a href="index_rwd.html">首頁</a>　>　<a href="mall.html">商店</a>　>　<span style="font-weight: 500;">居家用品</span>
     </div>
 </section>
-
-<div class="page">
-    <div class="pagebtn">
-        <ul>
-            <li class="prev">＜</li>
-            <li class="this_page">1</li>
-            <li>2</li>
-            <li>3</li>
-            <li class="next">＞</li>
-        </ul>
-    </div>
+    
+    <!-- banner_pic -->
+    
+    <div class="banner_frame"><div class="banner_pic"></div></div>
+    
+<div class="document">    
+    <section class="product_icon">
+        <div class="out">
+            <div class="class_title out_title" >
+                <h1>居家用品</h1>
+            </div>
+    
+            <div class="out_icon">
+                <div>
+                    <a href=""><img src="img/icon/class/rope-toy.png" alt=""></a>
+                    <h2>玩具</h2>
+                    <h3>toy</h3>
+                </div>
+                <div>
+                    <a href=""><img src="img/icon/class/dog-bowl.png" alt=""></a>
+                    <h2>餐具</h2>
+                    <h3>bowl</h3>
+                </div>
+                <div>
+                    <a href=""><img src="img/icon/class/doghouse.png" alt=""></a>
+                    <h2>睡窩</h2>
+                    <h3>doghouse</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    <!-- out -->
+    <section class="hot_product container" >
+        <div class="hot_product_item row">
+            <div class="product col-6 col-md-3">
+                <a href="product.html">
+                    <img src="img/product/product05.jpg" alt="ppark">
+                    <h2 class="product_name">ppark︱工字型丹寧胸背帶</h2>
+                    <h1 class="price">NT$1,190</h1>
+                </a>
+            </div>
+            <div class="product col-6 col-md-3">
+                <a href="product.html">
+                    <img src="img/product/product04.jpg" alt="">
+                    <h2 class="product_name">tails&me︱多功能尼龍牽繩</h2>
+                    <h1 class="price">NT$790</h1>
+                </a>
+            </div>
+            <div class="product col-6 col-md-3">
+                <a href="product.html">
+                    <img src="img/product/product06.png" alt="">
+                    <h2 class="product_name">PETRICK︱經典快扣式項圈</h2>
+                    <h1 class="price">$480</h1>
+                </a>
+            </div>
+            <div class="product col-6 col-md-3">
+                <a href="product.html">
+                    <img src="img/product/product03.jpg" alt="ppark">
+                    <h2 class="product_name">flexi︱5米伸縮牽繩</h2>
+                    <h1 class="price">NT$890</h1>
+                </a>
+            </div>
+            <div class="product col-6 col-md-3">
+                <a href="product.html">
+                    <img src="https://cf.shopee.tw/file/497601b0032d18ded24b4d75cba1b5a7" alt="">
+                    <h2 class="product_name"> EZYDOG︱原創尼歐項圈</h2>
+                    <h1 class="price">NT$450</h1>
+                </a>
+            </div>
+            <div class="product col-6 col-md-3">
+                <a href="product.html">
+                    <img src="https://d.ecimg.tw/items/DEAKFSA900B2IVY/000001_1609224195.jpg" alt="Petstages">
+                    <h2 class="product_name">TUFF HOUND︱撞色防掙脫胸背帶</h2>
+                    <h1 class="price">NT$980</h1>
+                </a>
+            </div>
+            <div class="product col-6 col-md-3">
+                <a href="product.html">
+                    <img src="https://img.udnfunlife.com/image/product/DS005021/APPROVED/DU00050798/copy_p_201910051727450760_1000.jpg?t=20191007183512" alt="">
+                    <h2 class="product_name">EZYDOG︱牛津皮革項圈</h2>
+                    <h1 class="price">$780</h1>
+                </a>
+            </div>
+            <div class="product col-6 col-md-3">
+                <a href="product.html">
+                    <img src="https://img.udnfunlife.com/image/product/DS005021/APPROVED/DU00049819/20190912160139067_1000.jpg?t=20190916122740" alt="ezydog">
+                    <h2 class="product_name">EZYDOG︱蛙人浮水衣</h2>
+                    <h1 class="price">NT$1850</h1>
+                </a>
+            </div>
+            <div class="product col-6 col-md-3">
+                <a href="product.html">
+                    <img src="img/product/product05.jpg" alt="ppark">
+                    <h2 class="product_name">ppark︱工字型丹寧胸背帶</h2>
+                    <h1 class="price">NT$1,190</h1>
+                </a>
+            </div>
+            <div class="product col-6 col-md-3">
+                <a href="product.html">
+                    <img src="https://shoplineimg.com/5ed902fac4dff10033226efc/61317b69dc7cbd002f14aed3/800x.webp?source_format=jpg" alt="">
+                    <h2 class="product_name">flexi︱幻彩系列 帶狀伸縮牽繩</h2>
+                    <h1 class="price">NT$990</h1>
+                </a>
+            </div>
+            <div class="product col-6 col-md-3">
+                <a href="product.html">
+                    <img src="https://imgservice.suning.cn/uimg1/b2c/image/rMa9-aWWCK7so3KFJDDh-w.jpg_800w_800h_4e" alt="">
+                    <h2 class="product_name">TUFF HOUND︱單色防掙脫胸背帶</h2>
+                    <h1 class="price">$890</h1>
+                </a>
+            </div>
+            <div class="product col-6 col-md-3">
+                <a href="product.html">
+                    <img src="https://img.udnfunlife.com/image/product/DS005021/APPROVED/DU00049552/20190906161549513_1000.jpg?t=20191226104429g" alt="EZYDOG">
+                    <h2 class="product_name">EZYDOG｜輕巧版零拉力牽繩</h2>
+                    <h1 class="price">NT$750</h1>
+                </a>
+            </div>
+        </div>
+        <div class="page_next">
+            <!-- <a href="#">
+                <img id="page_btn" src="img/slider_btn.png" alt="">
+            </a> -->
+        </div>
+    </section>
 </div>
+
+
 
 <footer>
     <div class="go_top scaleDraw">
@@ -265,7 +297,7 @@
     </div>
     <script>
         $('.go_top').click(function(){
-           $("html,body").animate({scrollTop:0}, 1000);
+           $("html,body").animate({scrollTop: 0}, 1000);
         });
     </script>
    <div class="footer">

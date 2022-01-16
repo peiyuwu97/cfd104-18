@@ -5,11 +5,11 @@
        
 /* 屬性選取器[] */
 /* [class*=col-]   class名稱裡只要用包含col-的都會被選到 */
-[class*=col-]{
+/* [class*=col-]{
     padding: 0 10px;
     box-sizing: border-box;
     margin-bottom: 15px;
-}
+} */
 .col-1{width: 8.3333333%;}
 .col-2{width: 16.666666%;}
 .col-3{width: 25%;}

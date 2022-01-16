@@ -1,0 +1,38 @@
+.page{
+    display: flex;
+    justify-content: center;
+    margin-top: -30px;
+    margin-bottom: 80px;
+}
+.pagebtn ul{
+    display: flex;
+}
+.pagebtn li{
+    display: block;
+    padding: 10px;
+    cursor: pointer;
+    color: rgba(61, 48, 36);
+    font-weight: 500;
+    margin: 0 5px;
+    position: relative;
+}
+.pagebtn li:hover{
+    font-weight: 900;
+}
+.this_page::after{
+    content: '';
+    position: absolute;
+    left: 10%;
+    bottom: 0;
+    width: 80%;
+    height: 2px;
+    background-color: rgba(117, 91, 67, 0.877);
+}
+.prev:hover{
+    transform: translateX(-3px);
+    transition: .2s;
+}
+.next:hover{
+    transform: translateX(3px);
+    transition: .2s ;
+}

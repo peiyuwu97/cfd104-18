@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>汪式漫步｜商品評價</title>
+    <title>汪式漫步｜通路資訊rwd</title>
+
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/header_final.css">
-    <link rel="stylesheet" href="css/good_comment_style.css">
+    <link rel="stylesheet" href="css/location_style_rwd.css">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/grid.css">
     <link rel="stylesheet" href="css/banner_style.css">
     <link rel="stylesheet" href="css/page.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -18,20 +20,37 @@
         a{
             text-decoration: none;
         }
-        .page{
-            margin-top: 20px;
-        }
-        .banner_title{
-            text-shadow: 1px 1px 5px white;
-        }
-    @media screen and (max-width:768px) {
-        .card{
-            display: block;
-        }
-        .content{
-            margin-top: 50px;
-        }
+.banner_title h1,.banner_title p{
+    color: rgb(243, 243, 232);
+    text-shadow:1px 1px 3px rgb(59, 33, 12);
+}
+/* 手機以上 */
+@media screen and (min-width:768px){
+    .position{
+        display: flex;
+        margin: 0 50px;
     }
+    .map_icon{
+        left: 40px
+    }
+    .card{
+        display: flex    
+    }
+    .card:nth-child(even){
+    flex-direction: row-reverse;
+    }
+}
+
+@media screen and (max-width:1010px) {
+    .banner img{
+        width: 100%;
+        overflow: hidden;
+    }
+    .dotted_line{
+        overflow: hidden; 
+    }
+}
+
     </style>
 </head>
 <body>
@@ -155,109 +174,152 @@
 
 <div class="banner">
     <div class="caption">
-        <img src="img/comment_banner_2.png" alt="">
+        <img src="img/location_banner.png" alt="">
         <div class="banner_title">
-            <h1>商品評價</h1>
-            <p>Feedback</p>
+            <h1>通路資訊</h1>
+            <p>Shop Info</p>
         </div>
-    </div>
-</div>    
-
-<section class="comment">
-    <div class="card" data-aos="fade-up" data-aos-duration="1000">
-        <a href="product.html" class="pic">
-            <img class="product_img" src="img/product/product06.png" alt="">
-            <h2 class="product_name">PETRICK<br>經典快扣式項圈</h2>
-            <h2 class="price">$480</h2>
-            <div class="text">
-                <p>前往商品頁</p>
-            </div>
-        </a>
-        <div class="content">
-            <p class="order_num">訂單後四碼：2890</p>
-            <img class="star" src="img/product/red_star.png" alt="star">
-            <p class="feedback">非常喜歡這個快扣式項圈，穿脫很方便，一秒就能扣上，顏色選擇也很多，可以依據衣服色系來做穿搭挑選，讓項圈變成狗狗的時尚配件！</p>
-            <p class="time">2021/12/19</p>
-        </div>
-    </div>
-    <div class="card" data-aos="fade-up" data-aos-duration="1000">
-        <a href="product.html" class="pic">
-            <img class="product_img" src="img/product/product05.jpg" alt="">
-            <h2 class="product_name">PETRICK<br>經典快扣式項圈</h2>
-            <h2 class="price">$980</h2>
-            <div class="text">
-                <p>前往商品頁</p>
-            </div>
-        </a>
-        <div class="content">
-            <p class="order_num">訂單後四碼：3903</p>
-            <img class="star" src="img/product/red_star.png" alt="star">
-            <p class="feedback">非常喜歡這個快扣式項圈，穿脫很方便，一秒就能扣上，顏色選擇也很多，可以依據衣服色系來做穿搭挑選，讓項圈變成狗狗的時尚配件！</p>
-            <p class="time">2021/12/17</p>
-        </div>
-    </div>
-    <div class="card" data-aos="fade-up" data-aos-duration="1000">
-        <a href="product.html" class="pic">
-            <img class="product_img" src="img/product/product01.jpg" alt="">
-            <h2 class="product_name">PETRICK<br>經典快扣式項圈</h2>
-            <h2 class="price">$900</h2>
-            <div class="text">
-                <p>前往商品頁</p>
-            </div>
-        </a>
-        <div class="content">
-            <p class="order_num">訂單後四碼：9876</p>
-            <img class="star" src="img/product/red_star.png" alt="star">
-            <p class="feedback">非常喜歡這個快扣式項圈，穿脫很方便，一秒就能扣上，顏色選擇也很多，可以依據衣服色系來做穿搭挑選，讓項圈變成狗狗的時尚配件！</p>
-            <p class="time">2021/12/13</p>
-        </div>
-    </div>
-    <div class="card" data-aos="fade-up" data-aos-duration="1000">
-        <a href="product.html" class="pic">
-            <img class="product_img" src="img/product/product03.jpg" alt="">
-            <h2 class="product_name">PETRICK<br>經典快扣式項圈</h2>
-            <h2 class="price">$480</h2>
-            <div class="text">
-                <p>前往商品頁</p>
-            </div>
-        </a>
-        <div class="content">
-            <p class="order_num">訂單後四碼：3459</p>
-            <img class="star" src="img/product/red_star.png" alt="star">
-            <p class="feedback">非常喜歡這個快扣式項圈，穿脫很方便，一秒就能扣上，顏色選擇也很多，可以依據衣服色系來做穿搭挑選，讓項圈變成狗狗的時尚配件！</p>
-            <p class="time">2021/12/10</p>
-        </div>
-    </div>
-    <div class="card" data-aos="fade-up" data-aos-duration="1000">
-        <a href="product.html" class="pic">
-            <img class="product_img" src="img/product/product07.png" alt="">
-            <h2 class="product_name">PETRICK<br>經典快扣式項圈</h2>
-            <h2 class="price">$480</h2>
-            <div class="text">
-                <p>前往商品頁</p>
-            </div>
-        </a>
-        <div class="content">
-            <p class="order_num">訂單後四碼：2316</p>
-            <img class="star" src="img/product/red_star.png" alt="star">
-            <p class="feedback">非常喜歡這個快扣式項圈，穿脫很方便，一秒就能扣上，顏色選擇也很多，可以依據衣服色系來做穿搭挑選，讓項圈變成狗狗的時尚配件！</p>
-            <p class="time">2021/12/06</p>
-        </div>
-    </div>
-</section>
-
-<div class="page">
-    <div class="pagebtn">
-        <ul>
-            <li class="prev">＜</li>
-            <li class="this_page">1</li>
-            <li>2</li>
-            <li>3</li>
-            <li class="next">＞</li>
-        </ul>
     </div>
 </div>
 
+<div class="region">
+    <a href="#taipei">
+        <img class="map_icon scaleDraw" src="img/icon/map.png" alt="">
+        <div class="position">
+            <h2>北部地區</h2>
+        </div>
+    </a>
+    <a href="#taichung">
+        <img class="map_icon scaleDraw" src="img/icon/map.png" alt="">
+        <div class="position">
+            <h2>中部地區</h2>
+        </div>
+    </a>
+    <a href="#tainan">
+        <img class="map_icon scaleDraw" src="img/icon/map.png" alt="">
+        <div class="position">
+            <h2>南部地區</h2>
+        </div>
+    </a>
+</div>
+
+
+<div class="dotted_line">
+    <img src="img/long_dotted_line.png" alt="dotted_line" id="dotted_line">
+</div>
+
+<section class="info container">
+    <div class="card" id="taipei">
+        <div class="pic">
+            <h3>台北師大店</h3>
+            <img class="shop_pic" src="img/location/shop1_3.jpg" alt="taipei_shop">
+        </div>
+        <div class="text">
+            <div class="about_shop">
+                <h3>門市資訊</h3>
+                <p>
+                    地址：台北市大安區師大路36巷45號<br>
+                    營業時間：周一至周日 10:00-19:00<br>
+                    電話：02-2231-9898
+                </p>
+                <a class="google_map" href="https://goo.gl/maps/UpfPwir2F5PfwcbJA">
+                    <img src="https://www.google.com/images/branding/product/2x/maps_96in128dp.png" alt="google_map">
+                </a>
+            </div>
+            <div class="about_en">
+                <h3>門市環境</h3>
+                <div class="small_pics">
+                    <div class="small_pic"><img src="https://dts0r5oeqkedm.cloudfront.net/2015/09/Mp-01.jpg" alt=""></div>
+                    <div class="small_pic"><img src="https://dts0r5oeqkedm.cloudfront.net/2015/09/Mp-02.jpg" alt=""></div>
+                    <div class="small_pic"><img src="https://dts0r5oeqkedm.cloudfront.net/2015/09/HD-02.jpg" alt=""></div>
+                </div>
+            </div> 
+        </div>
+ 
+    </div>
+    <div class="card" id="taichung">
+        <div class="pic">
+            <h3>台中公益店</h3>
+            <img class="shop_pic" src="img/location/shop2_2.jpg" alt="taichung_shop">
+        </div>
+        <div class="text">
+            <div class="about_shop">
+                <h3>門市資訊</h3>
+                <p>
+                    地址：台中市西區公益路168號<br>
+                    營業時間：周一至周日 10:00-19:00<br>
+                    電話：04-2431-3498
+                </p>
+                <a class="google_map" href="https://goo.gl/maps/UpfPwir2F5PfwcbJA">
+                    <img src="https://www.google.com/images/branding/product/2x/maps_96in128dp.png" alt="google_map">
+                </a>
+            </div>
+            <div class="about_en">
+                <h3>門市環境</h3>
+                <div class="small_pics">
+                    <div class="small_pic"><img src="https://dts0r5oeqkedm.cloudfront.net/2015/09/HD-01.jpg" alt=""></div>
+                    <div class="small_pic"><img src="https://dts0r5oeqkedm.cloudfront.net/2015/09/p2-02.jpg" alt=""></div>
+                    <div class="small_pic"><img src="https://dts0r5oeqkedm.cloudfront.net/2015/09/HD-02.jpg" alt=""></div>
+                </div>
+            </div> 
+        </div>
+    </div>
+    <div class="card" id="tainan">
+        <div class="pic">
+            <h3>台南萬昌店</h3>
+            <img class="shop_pic" src="img/location/shop3_2.jpg" alt="tainan_shop">
+        </div>
+        <div class="text">
+            <div class="about_shop">
+                <h3>門市資訊</h3>
+                <p>
+                    地址：台南市中西區萬昌街55號<br>
+                    營業時間：周一至周日 10:00-19:00<br>
+                    電話：06-2299-0355
+                </p>
+                <a class="google_map" href="https://goo.gl/maps/UpfPwir2F5PfwcbJA">
+                    <img src="https://www.google.com/images/branding/product/2x/maps_96in128dp.png" alt="google_map">
+                </a>
+            </div>
+            <div class="about_en">
+                <h3>門市環境</h3>
+                <div class="small_pics">
+                    <div class="small_pic"><img src="https://cdn.hk01.com/di/media/images/cis/5df33e44b66f770df1c18c53.jpg/YCBNnKbb4zzNqcsQarHtxLXXbSzFhz0gOpmKYgCZimI?v=w1920" alt=""></div>
+                    <div class="small_pic"><img src="https://img.pconline.com.cn/images/upload/upc/tx/housephotolib/1508/05/c0/10696153_1438736313086_690x460.jpg" alt=""></div>
+                    <div class="small_pic"><img src="https://hk.ulifestyle.com.hk/cms/images/event/w600/201903/20190315233044_0_dsc04323.JPG" alt=""></div>
+                </div>
+            </div> 
+        </div>
+    </div>
+</section>
+       <!-- 放大遮罩層 -->
+       <div class="bigimg_div" onclick="closeimg();">
+        <input class="close" type="button" value="X">
+        <img class="bigimg" src="" alt="">
+        </div>
+        <script>
+            $(".bigimg_div").hide();
+            function showLarge(e){
+            document.getElementsByClassName("bigimg")[0].src = e.target.src;
+            $(".bigimg_div").show();
+            $(".bigimg_div").css("top",$(document).scrollTop()+80);
+            $(".info").css("opacity","0.5").addClass("togray");
+            }
+            function closeimg() {
+                $(".bigimg_div").hide();
+                $(".info").css("opacity","1").removeClass("togray");
+            }
+
+        function init(){
+            let small_pics = document.querySelectorAll(".small_pic"); 
+            for(let i=0; i<small_pics.length; i++){
+                small_pics[i].onclick = showLarge;	
+            };
+            $(".close").onclick =closeimg;
+        }
+
+        window.addEventListener("load", init, false);
+        </script>
 <footer>
     <div class="go_top scaleDraw">
        <p>TOP</p>

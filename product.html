@@ -8,31 +8,33 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/product_style.css">
     <link rel="stylesheet" href="css/header_final.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <script src="js/jquery.js"></script>
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-    <!-- header -->
     <header>
-        <a class="logo" href="index.html"><img src="img/logo.png" alt="logo"></a>
+        <a class="logo" href="index_rwd.html"><img src="img/logo.png" alt="logo"></a>
         <ul class="drop-down-menu">
-            <li><a class="link" id="on_page" href="mall.html">商店</a>
+            <li><a class="link">商店</a>
                 <ul class="sub_link">
-                    <li><a href="#">最新商品</a></li>
+                    <li><a href="mall.html">所有商品</a></li>
                     <li><a href="mall_out.html">外出用品</a>
                         <ul>
-                            <li><a href="#">項圈</a>
+                            <li><a href="harness.html">項圈</a>
                             </li>
-                            <li><a href="#">牽繩</a>
+                            <li><a href="harness.html">牽繩</a>
                             </li>
-                            <li><a href="#">胸背帶</a>
+                            <li><a href="harness.html">胸背帶</a>
                             </li>
                         </ul>
                     </li>
                     <li><a href="mall_in.html">居家用品</a>
                         <ul>
-                            <li><a href="#">玩具</a></li>
-                            <li><a href="#">餐具</a></li>
-                            <li><a href="#">睡窩</a></li>
+                            <li><a href="harness.html">玩具</a></li>
+                            <li><a href="harness.html">餐具</a></li>
+                            <li><a href="harness.html">睡窩</a></li>
                         </ul>
                     </li>
     
@@ -40,42 +42,181 @@
             </li>
             <li><a class="link" href="news.html">最新消息</a></li>
             <li><a class="link" href="good_comment.html">商品評價</a></li>
-            <li><a class="link" href="location.html">通路資訊</a></li>
+            <li><a class="link" href="location_rwd.html">通路資訊</a></li>
     
         </ul>
         <div class="header_icon">
             <a href=""><img class="header_icon" src="img\icon\header_icon\資產 6.png" alt="searach"></a>
-            <a href=""><img class="header_icon" src="img\icon\header_icon\cart.png" alt="cart"></a>
+            <a href="login.html"><img class="header_icon" src="img\icon\header_icon\cart.png" alt="cart"></a>
             <a href="login.html"><img class="header_icon" src="img\icon\header_icon\login.png" alt="login"></a>            
         </div>
     
     </header>
+    
+    <header class="header_rwd">
+        <input type="checkbox" id="menu_control">
+        <label for="menu_control" class="menu_btn">
+            <span>選單</span>
+        </label>
+        <a class="logo" href="index_rwd.html">
+            <img src="img/logo.png" alt="logo">
+        </a>
+    
+        <a href="">
+            <img class="header_icon" src="img\icon\header_icon\cart.png" alt="cart">
+        </a>
+        <nav>
+            <a class="small_a" href=""><img src="https://cdn-icons-png.flaticon.com/512/2089/2089805.png" alt=""> 搜尋</a>
+            <a class="small_a" href="login.html"><img src="https://cdn-icons-png.flaticon.com/512/2089/2089827.png" alt=""> 登入</a>
+            <ul class="shopping_mall">
+                <li><a>商店 <img id="arrow1" src="https://cdn-icons-png.flaticon.com/512/271/271210.png" alt=""></a></li>
+                <li><a class="small_a mall_sub_rwd" href="mall.html">所有商品</a></li>
+    
+                <li class="out_li"><a class="small_a mall_sub_rwd">外出用品 <img id="arrow2" src="https://cdn-icons-png.flaticon.com/512/271/271210.png" alt=""></a>
+                    <ul class="out_ul" style="display: none;">
+                        <a class="sublink" href="mall_out.html">
+                            <li >▮ 戶外 ▮</li>
+                        </a>
+                        <a class="sublink" href="harness.html">
+                            <li >項圈</li>
+                        </a>
+                        <a class="sublink" href="harness.html">
+                            <li >牽繩</li>
+                        </a>
+                        <a class="sublink" href="harness.html">
+                            <li >胸背帶</li>
+                        </a>
+                    </ul>
+                </li>
+                <li class="in_li"><a class="small_a mall_sub_rwd">居家用品 <img id="arrow3" src="https://cdn-icons-png.flaticon.com/512/271/271210.png" alt=""></a>
+                    <ul class="in_ul" style="display: none;">
+                        <a class="sublink" href="mall_in_rwd.html">
+                            <li>▮ 居家 ▮</li>
+                        </a>
+                        <a class="sublink" href="harness.html">
+                            <li>玩具</li>
+                        </a>
+                        <a class="sublink" href="harness.html">
+                            <li>餐具</li>
+                        </a>
+                        <a class="sublink" href="harness.html">
+                            <li>睡窩</li>
+                        </a>
+                    </ul>
+                </li>
+            </ul>
+            <script>
+                $(function(){
+                    $('.shopping_mall').find('li').first().click(function(){
+                        $('#arrow1').toggleClass('opened');
+                        $(this).nextAll().toggle();
+                    }).nextAll().hide();
+                    
+                    $('.out_li').click(function(){
+                        $('.out_ul').toggle();
+                        $('#arrow2').toggleClass('opened');
+                    });
+                    $('.in_li').click(function(){
+                        $('.in_ul').toggle();
+                        $('#arrow3').toggleClass('opened');
+                    });
+    
+                });
+            </script>
+    
+            <a href="news.html">最新消息</a>
+            <a href="good_comment.html">商品評價</a>
+            <a href="location_rwd.html">通路資訊</a>
+        </nav>
+    </header>
     <!-- path -->
-    <section class="path">
-        <a href="index.html">首頁</a>　>　<a href="mall.html">商店</a>　>　<a href="mall_in.html">居家用品</a>　>　玩具　>　<span style="font-weight: 500;">KONG | 寵物漏食玩具 - 紅</span>
-    </section>
+<section class="path">
+    <div>
+        <a href="index_rwd.html">首頁</a>　>　<a href="mall.html">商店</a>　>　<a href="mall_in_rwd.html">居家用品</a>　>　<a href="harness.html">玩具</a>　>　<span style="font-weight: 500;">KONG | 寵物漏食玩具 - 紅</span>
+    </div>
+</section>
 
     <!-- product_info -->
     <section class="product_info">
         <div class="product_img">
-            <div class="large_pic">
-                <img id="large" src="img/kong/kong_main.png" alt="">
-                <img id="frame" src="img/frame_2.png" alt="frame">
+            <div class="large_pic_out">
+                <div class="large_pic">
+                    <img id="large" src="img/kong/kong_main.png" alt="大圖">
+                </div>
             </div>
+
             <div class="product_slider">
-                <a href=""><img src="img/slider_btn.png" class="slider_btn" alt="btn"></a>
-
-                <img class="slider_pic" src="img/kong/kong_main.png" alt="">
-                <img class="slider_pic" src="img/kong/kong_small3.png" alt="">
-                <img class="slider_pic" src="img/kong/kong_small2.png" alt="">
-                <img class="slider_pic" src="img/kong/kong_small1.png" alt="">
-
-                <a href=""><img src="img/slider_btn.png" class="slider_btn" alt="btn" style="transform: rotate(180deg);"></a>
+                <div class="wrap">
+                    <div class="slider_item" >
+                        <img class="slider_pic" style="opacity: 1;" src="img/kong/kong_main.png" alt="">
+                    </div>
+                    <div class="slider_item">
+                        <img class="slider_pic" src="img/kong/kong_small3.png" alt="">
+                    </div>
+                    <div class="slider_item">
+                        <img class="slider_pic" src="img/kong/kong_small2.png" alt="">
+                    </div>
+                    <div class="slider_item">
+                        <img class="slider_pic" src="img/kong/kong_small1.png" alt="">
+                    </div>
+                    <div class="slider_item">
+                        <img class="slider_pic" src="img/kong/kong小圖4.webp" alt="">
+                    </div>
+                    <div class="slider_item">
+                        <img class="slider_pic" src="https://cdn.store-assets.com/s/312458/i/16307713.jpeg?width=1024&format=webp" alt="">
+                    </div>
+                </div>
             </div>
+            <div class="for_flex">
+                <div id="shiftPanel">
+                    <input type="button" class="slider_btn" id="btnLeft" value="<" disabled>
+                    <input type="button" class="slider_btn" id="btnRight" value=">">
+                </div>
+            </div>
+            <!-- slider -->
+            <script>
+                function $id(id){
+                return document.getElementById(id);
+                }
+                window.addEventListener("load", function(){
+
+                let items ;
+                let wrap = document.querySelector(".wrap") ;
+                let itemsLength ;
+                let curIndex = 0
+                $id("btnLeft").onclick = function(){
+                    curIndex --;
+                    let left = -72*curIndex;
+                    wrap.style.left = left + "px";
+                    //index=0 就不能按往左
+                    if(curIndex == 0){
+                        $id("btnLeft").disabled = true;
+                    }
+                    //往左之後往右的要可以按
+                    $id("btnRight").disabled = false;
+                }
+                //-----------------------------------------btnRight.onclick
+                $id("btnRight").onclick = function(){
+                    curIndex++;
+                    wrap.style.left = -72*curIndex + "px";
+                    //index到5就不能按
+                    if(curIndex == 2){
+                        $id("btnRight").disabled = true;
+                    }
+                    //往右之後往左的要可以按
+                    $id("btnLeft").disabled = false;
+                }
+
+            })
+            </script>
+            <!-- 點小圖看大圖 -->
             <script>
                 function showLarge(e){
-                    document.getElementById("large").src = e.target.src ;
+                    document.getElementById("large").src = e.target.src;
+                    e.target.style.opacity=1;
+                    $('.slider_pic').not(this).fadeTo(200,0.7);
                 }
+
                 function init(){
                     let small_pics = document.querySelectorAll(".slider_pic"); 
                     for(let i=0; i<small_pics.length; i++){
@@ -83,71 +224,97 @@
                     }
                 }
                 window.addEventListener("load", init, false);
-                </script>  
+            </script>  
         </div>
-        <div class="product_buy">
-            <h1>KONG | 寵物漏食玩具 - 紅</h1>
-            <p class="price">NT$480</p>
-            <div class="comment">
-                <img src="img/product/star.png" alt="star" width="70px">
-                <span>5.0分 | 3個評價 </span>
-            </div>
-            <div class="size">
-                <h4>尺寸</h4>
-                <div class="product_size">
-                    <input type="radio" name="size" id="s_size">
-                    <label class="size_btn" for="s_size">S</label>
-                    <input type="radio" name="size" id="m_size">
-                    <label class="size_btn" for="m_size">M</label>
-                    <input type="radio" name="size" id="l_size">
-                    <label class="size_btn" for="l_size">L</label>
+        <div class="for_flex">
+            <div class="product_buy">
+                <h1>KONG | 寵物漏食玩具 - 紅</h1>
+                <p class="made_in">Made In America</p>
+                <p class="price">NT$480</p>
+                <div class="comment">
+                    <img src="img/product/red_star.png" alt="star" width="70px">
+                    <span>5.0分 | 3個評價 </span>
+                </div>
+                <div class="size">
+                    <h4>尺寸</h4>
+                    <div class="product_size">
+                        <input type="radio" name="size" id="s_size">
+                        <label class="size_btn" for="s_size">S</label>
+                        <input type="radio" name="size" id="m_size">
+                        <label class="size_btn" for="m_size">M</label>
+                        <input type="radio" name="size" id="l_size">
+                        <label class="size_btn" for="l_size">L</label>
+                    </div>
+                </div>
+                <div class="number">
+                    <h4>數量</h4>
+                    <div class="number_btn">
+                        <input type="button" class="btnMinus" value="-"><input type="text" class="qtyBox" name="qty" value="1"><input type="button" class="btnPlus" value="+">
+                        <!-- 數量加減 -->
+                        <script>
+                        let btnMinus,qtyBoxes,btnPlus;
+                        function changeQty(i,qty){
+                            let newQty = parseInt(qtyBoxes[i].value) + qty;
+                            if(newQty<0){
+                                newQty=0;
+                            }
+                            qtyBoxes[i].value = newQty;
+                        }
+                        window.addEventListener("load", function(){
+                            btnMinus = document.getElementsByClassName("btnMinus");
+                            qtyBoxes = document.getElementsByClassName("qtyBox");
+                            btnPlus = document.getElementsByClassName("btnPlus");
+                            for(let i=0;i<btnMinus.length;i++){
+                                btnMinus[i].onclick = function(){
+                                    changeQty(i,-1);
+                                };
+                                btnPlus[i].onclick = function(){
+                                    changeQty(i,+1);
+                                };
+                            }
+                        })
+                        </script>
+                    </div>
+                </div>
+                <div class="put_in_cart">
+                    <button>加入購物車</button>
+                    <button>立即購買</button>
+                </div>
+                <div class="share">
+                    <h4>分享到</h4>
+                    <div class="share_icon">
+                        <a href=""><img src="img/icon/line.png" alt="line"></a>
+                        <a href=""><img src="img/icon/facebook.png" alt="fb"></a>
+                        <a href=""><img src="img/icon/instagram.png" alt="ig"></a>
+                    </div>
+                </div>
+                <div class="want">
+                    <img id="heart" title="加入收藏" src="img/icon/love.png" alt="heart">
+                    <script>
+                        let heart;
+                        function switchFavorite(){
+                          if(heart.title == "加入收藏"){
+                            heart.src = "img/icon/love_red.png";
+                            heart.title = "取消收藏";
+                          }else{
+                            heart.src = "img/icon/love.png";
+                            heart.title = "加入收藏";
+                          }
+                        }
+            
+                        function init(){
+                          heart = document.getElementById("heart");
+                          heart.onclick = switchFavorite;
+                        }
+            
+                        window.addEventListener("load", init, false);
+            
+            
+                    </script>
+                    <h4>加入收藏</h4>
                 </div>
             </div>
-            <div class="number">    
-                <h4>數量</h4>
-                <div class="number_btn">
-                    <input type="number" value="1" min="1" max="100">
-                </div>
-            </div>
-            <div class="put_in_cart">
-                <button>加入購物車</button>
-                <button>立即購買</button>
-            </div>
-            <div class="share">
-                <h4>分享到</h4>
-                <div class="share_icon">
-                    <a href=""><img src="img/icon/line.png" alt="line"></a>
-                    <a href=""><img src="img/icon/facebook.png" alt="fb"></a>
-                    <a href=""><img src="img/icon/instagram.png" alt="ig"></a>
-                </div>
-            </div>
-            <div class="want">
-                <img id="heart" title="加入收藏" src="img/icon/love.png" alt="heart">
-                <script>
-                    let heart;                 
-                    function switchFavorite(){
-                      if(heart.title == "加入收藏"){
-                        heart.src = "img/icon/love_red.png";
-                        heart.title = "取消收藏";
-                      }else{
-                        heart.src = "img/icon/love.png";
-                        heart.title = "加入收藏";
-                      }
-                    }
-                    
-                    function init(){
-                      heart = document.getElementById("heart");
-                      heart.onclick = switchFavorite;
-                    }
-                    
-                    window.addEventListener("load", init, false);
-                    
-                    
-                    </script> 
-                <p>加入收藏</p>
-            </div>
-
-        </div>      
+        </div>  
     </section>
 
     <section class="product_details">   
@@ -157,16 +324,16 @@
 
 
         <h2>尺寸表</h2>
-        <img src="img/kong/a1jbx-4vqda.png" alt="size" id="kong_size">
+        <img src="img/kong/kong尺寸.webp" alt="size" id="kong_size">
         <img src="img/kong/kong介紹.png" alt="">
         <ul>商品資訊</ul>
-            <li> 美國KONG的招牌，最經典設計葫蘆造型的抗憂鬱玩具</li>
-            <li> 動物醫師、狗狗行為學家、訓練師強力推薦</li>
-            <li> 符合狗狗嘴型的玩具，可放在口中咀嚼將玩具中的食物壓碎擠出</li>
-            <li> 適合填充零食飼料讓狗狗打時間</li>
-            <li> 狗狗拋丟的時候會產生不規則的彈跳，增添使用上的樂趣</li>
-            <li> 可以冷凍或微波加熱，可搭配KONG起司醬/花生醬/優格醬/地瓜醬做使用</li>
-            <li> 貓咪可選擇XS尺寸搭配肉泥使用</li>
+            <li> <span></span>美國KONG的招牌，最經典設計葫蘆造型的抗憂鬱玩具</li>
+            <li> <span></span>動物醫師、狗狗行為學家、訓練師強力推薦</li>
+            <li> <span></span>符合狗狗嘴型的玩具，可放在口中咀嚼將玩具中的食物壓碎擠出</li>
+            <li> <span></span>適合填充零食飼料讓狗狗打時間</li>
+            <li> <span></span>狗狗拋丟的時候會產生不規則的彈跳，增添使用上的樂趣</li>
+            <li> <span></span>可以冷凍或微波加熱，可搭配KONG起司醬/花生醬/優格醬/地瓜醬做使用</li>
+            <li> <span></span>貓咪可選擇XS尺寸搭配肉泥使用</li>
         
             <table style="width: 100%; margin: 30px 0;">
                 <tbody>
@@ -207,110 +374,136 @@
         <!-- <div class="border_div">
             <img class="long_border" src="img/資產 5.png" alt="long_border">
         </div>     -->
+        <div class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/6v7XXiz-cJI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
     </section>
 
 
 
-    <div class="video">
-        <img src="img/資產 7.png" alt="">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/6v7XXiz-cJI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <img src="img/資產 7.png" alt="" style="transform: rotate(180deg);">
-    </div>
     <section class="good_comment">
     <!-- 愛用者推薦_標題 -->
-        <div class="user_title">
-            <img src="img/dotted_line.png" alt="dotted_line" style="transform: rotate(90deg)" >
+        <div class="user_title lovers">
+            <img src="img/dotted_line2.png" alt="dotted_line" >
             <h2>愛用者推薦</h2>
-            <img src="img/dotted_line.png" alt="dotted_line" style="transform: rotate(90deg)" >
+            <img src="img/dotted_line2.png" alt="dotted_line" >
         </div>
 
-        <div class="comment_item">
-            <img src="img/kong/kong_user1.jpg" alt="comment_1">
+        <div data-aos="fade-up" data-aos-duration="3000" class="comment_item">
+            <div class="user_info">
+                <img src="img/kong/kong_user1.jpg" alt="comment_1">
+                <p class="user_name">bobo</p>
+            </div>
             <div class="comment_content">
-                <p>超喜歡尾巴與我的產品，顏色選擇多又容易穿脫，而且不會勒到我的氣管，還可以搭配配件，裝飾性和實用性都很高，散步也可以美美的了！</p>
+                <p>這個藏食玩具是我所有玩具裡最喜歡的！夏天的時候可以放進冷凍庫冰鎮，主人出門的時候再拿出來，自己在家也不無聊囉。</p>
                 <img src="img/comment_circle.png" alt="comment_circle">
             </div>
         </div>
-        <div class="comment_item">
-            <img src="img/kong/kong_user2.jpg" alt="comment_1">
+        <div data-aos="fade-up" data-aos-duration="3000"  class="comment_item">
+            <div class="user_info">
+                <img src="img/kong/kong_user2.jpg" alt="comment_1">
+                <p class="user_name">abby</p>
+            </div>
             <div class="comment_content">
-                <p>超喜歡尾巴與我的產品，顏色選擇多又容易穿脫，而且不會勒到我的氣管，還可以搭配配件，裝飾性和實用性都很高，散步也可以美美的了！</p>
+                <p>美國大品牌KONG的玩具使用起來很放心，搭配KONG的無糖花生醬，讓玩具更有趣味性了，體積小帶出門玩也很方便喔。
+                </p>
                 <img src="img/comment_circle.png" alt="comment_circle">
             </div>
         </div>
     </section>
 
-    <div class="user_title">
-        <img src="img/dotted_line.png" alt="dotted_line" style="transform: rotate(90deg)" >
+    <div class="user_title onthers">
+        <img src="img/dotted_line2.png" alt="dotted_line" >
         <h2>你也會喜歡</h2>
-        <img src="img/dotted_line.png" alt="dotted_line" style="transform: rotate(90deg)" >
+        <img src="img/dotted_line2.png" alt="dotted_line" >
     </div>
 
-    <section class="hot_product">
-        <div class="hot_product_item">
-            <div class="product">
+    <section class="hot_product container">
+        <div class="hot_product_item row">
+            <div class="product col-6 col-md-3" data-aos="fade-up" data-aos-duration="2000">
                 <a href="">
                     <img src="img/kong/toy1.jpg" alt="you_will_like1">
                     <h2 class="product_name">Bite Me<br>花生玩具</h2>
-                    <h1 class="price">NT$390</h1>
+                    <p class="price">NT$390</p>
                 </a>
             </div>
-            <div class="product">
+            <div class="product col-6 col-md-3" data-aos="fade-up" data-aos-duration="2000">
                 <a href="">
                     <img src="https://cdn.store-assets.com/s/312458/i/12483901.jpeg?width=1024&format=webp" alt="Petstages">
                     <h2 class="product_name">Petstages<br>磨牙啃咬玩具 史迪克</h2>
-                    <h1 class="price">NT$190</h1>
+                    <p class="price">NT$190</p>
                 </a>
             </div>
-            <div class="product">
+            <div class="product col-6 col-md-3" data-aos="fade-up" data-aos-duration="2000">
                 <a href="">
                     <img src="https://cdn.store-assets.com/s/312458/i/12482489.jpeg?width=1024&format=webp" alt="">
                     <h2 class="product_name">KONG<br>紅色狗骨頭啃咬玩具</h2>
                     <p class="price">NT$330</p>
                 </a>
             </div>
-            <div class="product">
+            <div class="product col-6 col-md-3" data-aos="fade-up" data-aos-duration="2000">
                 <a href="">
                     <img src="https://diz36nn4q02zr.cloudfront.net/webapi/imagesV3/Original/SalePage/6685449/0/637733417870570000?v=1" alt="">
                     <h2 class="product_name">tails&me<br>寵物啃咬玩具 - 章魚</h2>
-                    <h1 class="price">$550</h1>
+                    <p class="price">$550</p>
                 </a>
             </div>
         </div>
     </section>
 
     <footer>
-         
-        <div class="contact">
-            <h3>聯絡我們</h3>
-            <p>
-            營業時間：周一至周五 09:30-18:00<br>
-            客服電話：03-1333-3111<br>
-            E-mail：service@gmail.com
-            </p>
+        <div class="go_top scaleDraw">
+           <p>TOP</p>
+           <img src="img/logo_small.png" alt="">
         </div>
-        <div class="guideline">
-            <h3>購物說明</h3>
-            <p>
-            <a href="">條款與細項</a>
-            <a href="">退換貨政策</a>   
-            <a href="">付款與配送</a>
-            </p> 
-        </div>
-        <div class="follow">
-            <h3>關注我們</h3>
-            <div id="follow_icon">
-            <a href=""><img src="img/icon/fb.png" alt="fb"></a>
-            <a href=""><img src="img/icon/ig.png" alt="ig"></a>
-            <a href=""><img src="img/icon/line-1.png" alt="line"></a>
-            </div>
-        </div>
-        <div class="fb">
-            <a href=""><img id="fb_banner" src="img/fb_banner.png" alt="fb_banner"></a>
-        </div>
-    </footer>
-    <div class="copyright">
-        <p>本網站為緯育TibaMe前端設計工程師班第xx期學員專題作品，本平台僅供學習、展示之用。<br>參考資源：Pinterest。若有侵權疑慮，您可以私訊TibaMe-前端設計工程師養成班，後續會由專人協助處理</p>
-    </div>
+        <script>
+            $('.go_top').click(function(){
+               $("html,body").animate({scrollTop: 0}, 1000);
+            });
+        </script>
+       <div class="footer">
+           <div class="contact">
+               <h3>聯絡我們</h3>
+               <p>
+               營業時間：周一至周五 09:30-18:00<br>
+               客服電話：03-1333-3111<br>
+               E-mail：service@gmail.com
+               </p>
+               <p id="contact_rwd">
+               周一至周五 09:30-18:00<br>
+               03-1333-3111<br>
+               service@gmail.com
+               </p>
+           </div>
+           <div class="guideline">
+               <h3>購物說明</h3>
+               <p>
+               <a href="">條款與細項</a>
+               <a href="">退換貨政策</a>
+               <a href="">付款與配送</a>
+               </p>
+           </div>
+           <div class="follow">
+               <h3>關注我們</h3>
+               <div id="follow_icon">
+                   <a href=""><img src="img/icon/fb.png" alt="fb"></a>
+                   <a href=""><img src="img/icon/ig.png" alt="ig"></a>
+                   <a href=""><img src="img/icon/line-1.png" alt="line"></a>
+               </div>
+           </div>
+           <div class="fb">
+               <a href=""><img class="fb_banner" src="img/fb_banner.png" alt="fb_banner"></a>
+           </div>
+       </div>
+   </footer>
+
+   <div class="copyright">
+       <p>本網站為緯育TibaMe前端設計工程師班第xx期學員專題作品，本平台僅供學習、展示之用。<br>參考資源：Pinterest。若有侵權疑慮，您可以私訊TibaMe-前端設計工程師養成班，後續會由專人協助處理</p>
+   </div>
+
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   <script>
+       AOS.init();
+   </script>
 </body>
 </html>

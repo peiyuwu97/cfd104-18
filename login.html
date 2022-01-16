@@ -9,47 +9,131 @@
     <link rel="stylesheet" href="css/login_style.css">
     <link rel="stylesheet" href="css/header_final.css">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <style>
+        a{
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
-    <!-- header -->
-    <header>
-        <a class="logo" href="index.html"><img src="img/logo.png" alt="logo"></a>
-        <ul class="drop-down-menu">
-            <li><a class="link" href="mall.html">商店</a>
-                <ul class="sub_link">
-                    <li><a href="#">最新商品</a></li>
-                    <li><a href="mall_out.html">外出用品</a>
-                        <ul>
-                            <li><a href="#">項圈</a>
-                            </li>
-                            <li><a href="#">牽繩</a>
-                            </li>
-                            <li><a href="#">胸背帶</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a href="mall_in.html">居家用品</a>
-                        <ul>
-                            <li><a href="#">玩具</a></li>
-                            <li><a href="#">餐具</a></li>
-                            <li><a href="#">睡窩</a></li>
-                        </ul>
-                    </li>
-    
+<!-- header -->
+<header>
+    <a class="logo" href="index_rwd.html"><img src="img/logo.png" alt="logo"></a>
+    <ul class="drop-down-menu">
+        <li><a class="link">商店</a>
+            <ul class="sub_link">
+                <li><a href="mall.html">所有商品</a></li>
+                <li><a href="mall_out.html">外出用品</a>
+                    <ul>
+                        <li><a href="harness.html">項圈</a>
+                        </li>
+                        <li><a href="harness.html">牽繩</a>
+                        </li>
+                        <li><a href="harness.html">胸背帶</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="mall_in.html">居家用品</a>
+                    <ul>
+                        <li><a href="harness.html">玩具</a></li>
+                        <li><a href="harness.html">餐具</a></li>
+                        <li><a href="harness.html">睡窩</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </li>
+        <li><a class="link" href="news.html">最新消息</a></li>
+        <li><a class="link" href="good_comment.html">商品評價</a></li>
+        <li><a class="link" href="location_rwd.html">通路資訊</a></li>
+
+    </ul>
+    <div class="header_icon">
+        <a href=""><img class="header_icon" src="img\icon\header_icon\資產 6.png" alt="searach"></a>
+        <a href="login.html"><img class="header_icon" src="img\icon\header_icon\cart.png" alt="cart"></a>
+        <a href="login.html"><img class="header_icon" src="img\icon\header_icon\login.png" alt="login"></a>            
+    </div>
+
+</header>
+
+<header class="header_rwd">
+    <input type="checkbox" id="menu_control">
+    <label for="menu_control" class="menu_btn">
+        <span>選單</span>
+    </label>
+    <a class="logo" href="index_rwd.html">
+        <img src="img/logo.png" alt="logo">
+    </a>
+
+    <a href="">
+        <img class="header_icon" src="img\icon\header_icon\cart.png" alt="cart">
+    </a>
+    <nav>
+        <a class="small_a" href=""><img src="https://cdn-icons-png.flaticon.com/512/2089/2089805.png" alt=""> 搜尋</a>
+        <a class="small_a" href="login.html"><img src="https://cdn-icons-png.flaticon.com/512/2089/2089827.png" alt=""> 登入</a>
+        <ul class="shopping_mall">
+            <li><a>商店 <img id="arrow1" src="https://cdn-icons-png.flaticon.com/512/271/271210.png" alt=""></a></li>
+            <li><a class="small_a mall_sub_rwd" href="mall.html">所有商品</a></li>
+
+            <li class="out_li"><a class="small_a mall_sub_rwd">外出用品 <img id="arrow2" src="https://cdn-icons-png.flaticon.com/512/271/271210.png" alt=""></a>
+                <ul class="out_ul" style="display: none;">
+                    <a class="sublink" href="mall_out.html">
+                        <li >▮ 戶外 ▮</li>
+                    </a>
+                    <a class="sublink" href="harness.html">
+                        <li >項圈</li>
+                    </a>
+                    <a class="sublink" href="harness.html">
+                        <li >牽繩</li>
+                    </a>
+                    <a class="sublink" href="harness.html">
+                        <li >胸背帶</li>
+                    </a>
                 </ul>
             </li>
-            <li><a class="link" href="news.html">最新消息</a></li>
-            <li><a class="link" href="good_comment.html">商品評價</a></li>
-            <li><a class="link"  href="location.html">通路資訊</a></li>
-    
+            <li class="in_li"><a class="small_a mall_sub_rwd">居家用品 <img id="arrow3" src="https://cdn-icons-png.flaticon.com/512/271/271210.png" alt=""></a>
+                <ul class="in_ul" style="display: none;">
+                    <a class="sublink" href="mall_in_rwd.html">
+                        <li>▮ 居家 ▮</li>
+                    </a>
+                    <a class="sublink" href="harness.html">
+                        <li>玩具</li>
+                    </a>
+                    <a class="sublink" href="harness.html">
+                        <li>餐具</li>
+                    </a>
+                    <a class="sublink" href="harness.html">
+                        <li>睡窩</li>
+                    </a>
+                </ul>
+            </li>
         </ul>
-        <div class="header_icon">
-            <a href=""><img class="header_icon" src="img\icon\header_icon\資產 6.png" alt="searach"></a>
-            <a href=""><img class="header_icon" src="img\icon\header_icon\cart.png" alt="cart"></a>
-            <a href="login.html"><img class="header_icon" src="img\icon\header_icon\login.png" alt="login"></a>            
-        </div>
-    
-    </header>
+        <script>
+            $(function(){
+                $('.shopping_mall').find('li').first().click(function(){
+                    $('#arrow1').toggleClass('opened');
+                    $(this).nextAll().toggle();
+                }).nextAll().hide();
+                
+                $('.out_li').click(function(){
+                    $('.out_ul').toggle();
+                    $('#arrow2').toggleClass('opened');
+                });
+                $('.in_li').click(function(){
+                    $('.in_ul').toggle();
+                    $('#arrow3').toggleClass('opened');
+                });
+
+            });
+        </script>
+
+        <a href="news.html">最新消息</a>
+        <a href="good_comment.html">商品評價</a>
+        <a href="location_rwd.html">通路資訊</a>
+    </nav>
+</header>
 
     <section class="login">
         <div class="login_box">
@@ -80,9 +164,11 @@
                 <h2>密碼</h2>
                 <input type="password" name="password" id="password" placeholder="請輸入密碼">
             </div>
-            <button id="login_btn">
-                <h2>登入</h2>
-            </button>
+            <div class="for_flex">
+                <button id="login_btn">
+                    <h2>登入</h2>
+                </button>
+            </div>
             <div class="register">
                 <p>
                     <a href="register.html" id="register">註冊</a>
@@ -95,37 +181,58 @@
     </section>
 
     <footer>
-         
-        <div class="contact">
-            <h3>聯絡我們</h3>
-            <p>
-            營業時間：周一至周五 09:30-18:00<br>
-            客服電話：03-1333-3111<br>
-            E-mail：service@gmail.com
-            </p>
+        <div class="go_top scaleDraw">
+           <p>TOP</p>
+           <img src="img/logo_small.png" alt="">
         </div>
-        <div class="guideline">
-            <h3>購物說明</h3>
-            <p>
-            <a href="">條款與細項</a>
-            <a href="">退換貨政策</a>   
-            <a href="">付款與配送</a>
-            </p> 
-        </div>
-        <div class="follow">
-            <h3>關注我們</h3>
-            <div id="follow_icon">
-            <a href=""><img src="img/icon/fb.png" alt="fb"></a>
-            <a href=""><img src="img/icon/ig.png" alt="ig"></a>
-            <a href=""><img src="img/icon/line-1.png" alt="line"></a>
-            </div>
-        </div>
-        <div class="fb">
-            <a href=""><img id="fb_banner" src="img/fb_banner.png" alt="fb_banner"></a>
-        </div>
+        <script>
+            $('.go_top').click(function(){
+               $("html,body").animate({scrollTop: 0}, 1000);
+            });
+        </script>
+       <div class="footer">
+           <div class="contact">
+               <h3>聯絡我們</h3>
+               <p>
+               營業時間：周一至周五 09:30-18:00<br>
+               客服電話：03-1333-3111<br>
+               E-mail：service@gmail.com
+               </p>
+               <p id="contact_rwd">
+               周一至周五 09:30-18:00<br>
+               03-1333-3111<br>
+               service@gmail.com
+               </p>
+           </div>
+           <div class="guideline">
+               <h3>購物說明</h3>
+               <p>
+               <a href="">條款與細項</a>
+               <a href="">退換貨政策</a>
+               <a href="">付款與配送</a>
+               </p>
+           </div>
+           <div class="follow">
+               <h3>關注我們</h3>
+               <div id="follow_icon">
+                   <a href=""><img src="img/icon/fb.png" alt="fb"></a>
+                   <a href=""><img src="img/icon/ig.png" alt="ig"></a>
+                   <a href=""><img src="img/icon/line-1.png" alt="line"></a>
+               </div>
+           </div>
+           <div class="fb">
+               <a href=""><img class="fb_banner" src="img/fb_banner.png" alt="fb_banner"></a>
+           </div>
+       </div>
     </footer>
+    
     <div class="copyright">
-        <p>本網站為緯育TibaMe前端設計工程師班第xx期學員專題作品，本平台僅供學習、展示之用。<br>參考資源：Pinterest。若有侵權疑慮，您可以私訊TibaMe-前端設計工程師養成班，後續會由專人協助處理</p>
+       <p>本網站為緯育TibaMe前端設計工程師班第xx期學員專題作品，本平台僅供學習、展示之用。<br>參考資源：Pinterest。若有侵權疑慮，您可以私訊TibaMe-前端設計工程師養成班，後續會由專人協助處理</p>
     </div>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+       AOS.init();
+    </script>
 </body>
 </html>
