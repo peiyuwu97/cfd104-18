@@ -116,7 +116,6 @@ input[type=checkbox] {
     .filter {
         display: flex;
         justify-content: center;
-        /* background-color: rgba(224, 213, 193, 0.746); */
         margin-top: 50px;
     }
     .btn_filter{
@@ -149,5 +148,16 @@ input[type=checkbox] {
     #close:hover{
         color:white;
         background-color:rgb(87, 60, 25)
+    }
+}
+@media screen and (max-width:450px){
+    #close{
+        font-size: 25px;
+        background-color: transparent;
+        box-shadow: none;
+        border: transparent;
+    }
+    .search_btn{
+        right: 30px;
     }
 }
