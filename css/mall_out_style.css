@@ -36,6 +36,7 @@ body{
     background-attachment: fixed;
     background-position: center;
     opacity: 0.8;
+    background-repeat: no-repeat;
 }
 
 .product_icon{
@@ -183,7 +184,9 @@ a{
     left: 87%;
     bottom: 50px;
 }
-
+.banner_pic img{
+    display: none;
+}
 @media screen and (max-width:996px) {
     .product_name,.price{
         font-size: 15px;
@@ -195,25 +198,25 @@ a{
         margin: 0 20px;
     }
 }
-@media screen and (max-width:380px) {
+@media screen and (max-width:768px) {
     .banner_frame{
         display: flex;
         margin: 0 auto;
         margin-top: 50px;
         padding: 0; 
-        /* width: 80%; */
         height: 400px;
-        /* background-color: #5f5c58; */
         position: relative;
     }
     .banner_pic{
-        background-repeat: no-repeat;
-        background-position: -300px;
-        position: fixed;
-        left: 0;
-        right: 0;
-        margin-top: 0px;
-        z-index: -1;
+        display: flex;
+        justify-content:center ;
+        background-image:none;
+        overflow: hidden;
+        height: 350px;
+    }
+    .banner_pic img{
+        display: block;
+        position: relative;
     }
 
 }

@@ -27,11 +27,28 @@
                 display: none;
             }
         }
-        @media screen and (max-width:500px){
-            /* .banner_pic{
-                background-size: contain; 
-            } */
-        }
+        @media screen and (max-width:768px) {
+    .banner_frame{
+        display: flex;
+        margin: 0 auto;
+        margin-top: 50px;
+        padding: 0; 
+        height: 400px;
+        position: relative;
+    }
+    .banner_pic{
+        display: flex;
+        justify-content:center ;
+        background-image:none;
+        overflow: hidden;
+        height: 350px;
+    }
+    .banner_pic img{
+        display: block;
+        position: relative;
+    }
+
+}
     </style>
 </head>
 <body>
@@ -161,7 +178,11 @@
     
     <!-- banner_pic -->
     
-    <div class="banner_frame"><div class="banner_pic"></div></div>
+    <div class="banner_frame">
+        <div class="banner_pic">
+            <img src="img/in.jpeg" alt="">
+        </div>
+    </div>
     
 <div class="document">    
     <section class="product_icon">
